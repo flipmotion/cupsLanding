@@ -1,0 +1,88 @@
+.block-1 {
+  background: url(../images/block-1-bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 250px 0 85px;
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 30px;
+
+    span {
+      display: inline-block;
+      color: #000;
+      background: #fff;
+      line-height: 1.2;
+      margin-top: 10px;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    padding-left: 25px;
+    border-left: 3px solid #fff;
+    margin: 0 0 100px;
+    line-height: 1.6;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--social {
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      &__item {
+        list-style-type: none;
+        padding: 0 8px;
+      }
+
+      &__link {
+        display: inline-block;
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: #fff;
+        }
+      }
+    }
+
+    &--address {
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: -15px;
+        svg {
+          width: 40px;
+          height: 40px;
+          fill: #8a8a8a;
+        }
+      }
+
+      &__text {
+        font-size: 12px;
+        font-weight: 700;
+        color: #8a8a8a;
+      }
+    }
+  }
+
+  &__man {
+    position: absolute;
+    right: -90px;
+    bottom: -85px;
+    z-index: 2;
+    max-height: 720px;
+  }
+}
