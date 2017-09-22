@@ -3,4 +3,37 @@ html
   head
     include includes/head
   body
-    .header test
+    .header
+      .container
+        .row.align-items-center
+          .col-xs-12.col-sm-12.col-md-2.col-lg-2
+            img(src="../assets/images/logo.png").logo
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6
+            nav.navbar.navbar-expand-lg
+              button(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation").navbar-toggler
+                span.navbar-toggler-icon
+
+              div.collapse.navbar-collapse#navbarNav
+                ul.navbar-nav
+                  li.nav-item.active
+                    a(href="#").nav-link.text-uppercase РАБОТЫ 
+                      span.sr-only (current)
+                  li.nav-item
+                    a(href="#").nav-link.text-uppercase ЦЕНЫ
+                  li.nav-item
+                    a(href="#").nav-link.text-uppercase МЕРЧ
+                  li.nav-item
+                    a(href="#").nav-link.text-uppercase ДОСТАВКА И ОПЛАТА
+                  li.nav-item
+                    a(href="#").nav-link.text-uppercase FAQ
+                  li.nav-item
+                    a(href="#").nav-link.text-uppercase КОНТАКТЫ
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+            .header-action
+              div
+                p.header-phone +7 999 211 88 77
+              div
+                button(type="button").btn.btn-light.btn-action.text-uppercase
+                  span ЗАКАЗАТЬ ВЫШИВКУ
+                  span
+                    include ../assets/images/svg/noun_799228_cc.svg
