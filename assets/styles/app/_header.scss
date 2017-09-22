@@ -1,6 +1,10 @@
 .header {
-  background: #010101;
   padding: 22px 0;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   &-action {
     display: flex;
