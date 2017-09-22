@@ -1,0 +1,21 @@
+.navbar {
+  margin-left: -20px;
+}
+
+.navbar-nav {
+  justify-content: space-between;
+  flex:1;
+}
+
+.nav-link {
+  // @extend .GPM;
+  font-size: 11px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+
+  &:hover {
+    color: #7c7c7c;
+    text-decoration: none;
+  }
+}
