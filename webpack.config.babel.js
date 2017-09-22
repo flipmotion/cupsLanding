@@ -37,6 +37,20 @@ var config = {
         }
       },
       {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader",
+        exclude: path.resolve(__dirname, 'assets/images'),
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'file-loader',
+        include: path.resolve(__dirname, 'assets/images'),
+      },
+      {
         test: /\.svg/,
         exclude: /node_modules/,
         use: {
