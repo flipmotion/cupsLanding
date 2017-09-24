@@ -1,17 +1,50 @@
-// @font-face {
-//   font-family: 'GothamPro';
-//   src: url('./fonts/GothamPro.woff') format('truetype');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro-Light.woff') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
 
-// .GP {
-// 	font-family: GothamPro;
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro.woff') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-// .GPM {
-// 	@extend .GP;
-// 	font-weight: medium;
-// }
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro-Medium.woff') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../fonts/GothamPro-Bold.woff') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+%gp-n {
+  font-family: 'GothamPro';
+}
+
+.gp-n {
+  @extend %gp-n !optional;
+}
+
+.gp-l {
+  @extend %gp-n !optional;
+  font-weight: 300;
+}
+
+.gp-m {
+  @extend %gp-n !optional;
+  font-weight: 500;
+}
+
+.gp-b {
+  @extend %gp-n !optional;
+  font-weight: 700;
+}
