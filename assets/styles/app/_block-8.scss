@@ -1,0 +1,14 @@
+.block-8 {
+
+  &-btn-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-light {
+      margin: 0 10px;
+    }
+
+    margin-bottom: 70px;
+  }
+}

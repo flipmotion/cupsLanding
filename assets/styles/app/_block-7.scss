@@ -1,0 +1,12 @@
+.block-7 {
+  background: url(../images/block-7-bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 45px 0;
+
+  &-title {
+    @extend .gp-n;
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+  }
+}

@@ -26,5 +26,38 @@
       color: rgba(0,0,0,0.4);
       margin: 0;
     }
+
+    &--price {
+      @extend .gp-n;
+      color: #313131;
+      font-size: 23px;
+      margin: 0;
+      .rubl {
+        svg {
+          width: 0.5em;
+          fill: #313131;
+        }
+      }
+    }
   }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.fz-15 {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.double-row {
+  height: 36px;
+  overflow: hidden;
+}
+
+.offset-bottom-20 {
+  margin: 0 0 20px;
 }

@@ -43,4 +43,15 @@
   &-md {
     padding: 15px 34px;
   }
+
+  &-order {
+    border-color: #e5e5e5;
+    padding: 10px 30px;
+
+    &:hover {
+      background: #313131;
+      color: #fff;
+      border-color: #313131;
+    }
+  }
 }
