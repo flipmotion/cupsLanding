@@ -1,0 +1,56 @@
+.block-4 {
+  background: url(../images/block-4-bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 60px 0 70px;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 0 75px;
+  }
+
+  .pacan-2 {
+    position: absolute;
+    bottom: -70px;
+    right: -100px;
+  }
+}
+
+.price-list {
+  margin: 0 0 50px;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 1px solid #4f4f4f;
+
+    &--text {
+      display: inline-block;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      margin: auto 0;
+    }
+
+    &--price {
+      display: inline-block;
+      font-size: 30px;
+      color: #fff;
+      padding: 15px 0;
+      border-bottom: 1px solid #fff;
+      margin-bottom: -1px;
+    }
+  }
+  .rubl {
+    svg {
+      width: 0.5em;
+      fill: #fff;
+    }
+  }
+}
