@@ -26,6 +26,22 @@
   }
 }
 
+.custom-file-input:focus ~ .custom-file-control {
+  box-shadow: none;
+}
+
+.custom-file__form-group {
+  margin-bottom: 10px;
+}
+
+.custom-file-input {
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
 .custom-file {
   overflow: hidden;
 }

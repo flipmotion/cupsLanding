@@ -103,6 +103,8 @@ var config = {
       "window.jQuery": "jquery",
       Tether: "tether",
       "window.Tether": "tether",
+      Validation: path.resolve(__dirname, 'node_modules/jquery-validation/dist/jquery.validate.js'),
+      Validation_methods: path.resolve(__dirname, 'node_modules/jquery-validation/dist/additional-methods.js'),
       Popper: ['popper.js', 'default'],
       Button: "exports-loader?Button!bootstrap/js/dist/button",
       Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",

@@ -1,4 +1,3 @@
-<!-- Modal -->
 #call.modal.fade(
   tabindex="-1"
   role="dialog"
@@ -26,40 +25,41 @@
                       label.modal-form__label
                         span Ваше имя
                         span.required (Обязательно)
-                      input.form-control(type='text')
+                      input.form-control(type='text' name="user" required)
                     .form-group
                       label.modal-form__label
                         span Телефон
                         span.required (Обязательно)
-                      input.form-control(type='tel' data-input="phone" placeholder="+7 (___) ___-__-__")
+                      input.form-control(type='tel' data-input="phone" placeholder="+7 (___) ___-__-__" name="phone" required)
                     .form-group
                       label.modal-form__label
                         span E-mail
                         span.required (Обязательно)
-                      input.form-control(type='email' data-input="email")
+                      input.form-control(type='email' data-input="email" name="email" required)
 
                   .col-xs-12.col-md-6
                     .form-group
                       label.modal-form__label
                         span Сообщение
-                      textarea.form-control(type="text" rows="1")
+                      textarea.form-control(type="text" rows="1" name="message")
                     .row
-                      .col-sm-6
-                        .form-group
+                      .col-lg-12.offset-file-input.d-xs-none.d-sm-none.d-md-none
+                      .col-sm-6.col-md-12.col-lg-12.col-xl-6
+                        .form-group.custom-file__form-group
                           label.custom-file
-                            input.custom-file-input(type="file" accept="image/x-png,image/jpeg")
+                            input.custom-file-input(
+                              type="file"
+                              accept="image/x-png,image/jpeg"
+                              name="picture"
+                            )
                             span.custom-file-control(data-text="Прикрепите фaйл")
-                      .col-sm-6
+                      .col-sm-6.col-md-12.col-lg-12.col-xl-6
                         ul
                           li загрузите .png или .jpg
                           li максимальный размер файла 8мб
                 .row
                   .col.text-center
-                    button(type="submit").btn.btn-action.btn-primary ОТПРАВИТЬ
+                    p.policy Нажимая кнопку, вы даете согласие на обработку своих персональных данных
                 .row
                   .col.text-center
-                    p Нажимая кнопку, вы даете согласие на обработку своих персональных данных
-
-
-            .modal-footer
-              button.btn.btn-secondary(data-dismiss="modal") Close
+                    button(type="submit").btn.btn-primary ОТПРАВИТЬ

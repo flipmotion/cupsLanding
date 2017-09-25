@@ -1,0 +1,12 @@
+.has-danger {
+  .form-control {
+    border-color: $red;
+  }
+
+  .help-block,
+  .modal-form__label span:nth-child(2),
+  .modal-form__label span,
+  label {
+    color: $red;
+  }
+}
