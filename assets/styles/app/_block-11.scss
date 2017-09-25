@@ -1,0 +1,36 @@
+.block-11 {
+  padding-bottom: 50px;
+}
+
+.inst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+
+  &-logo-set {
+    display: flex;
+    align-items: center;
+
+    >div {
+      margin-right: 45px;
+    }
+  }
+
+  &-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 2px;
+
+    img {
+      width: 100%;
+    }
+
+    &-row {
+      @extend .row;
+      margin: 0;
+
+    }
+  }
+}
