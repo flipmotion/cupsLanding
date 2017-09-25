@@ -2,9 +2,10 @@ import webpack from 'webpack'
 import path from 'path'
 import autoprefixer from 'autoprefixer'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 let extractStyles = new ExtractTextPlugin('[name].css')
-let extractHtml = new ExtractTextPlugin('[name].html')
 
 let config = {
   stats: {
@@ -17,11 +18,7 @@ let config = {
     chunkModules: false
   },
 
-  entry: {
-    payture: [
-      path.resolve(__dirname, 'index.js')
-    ]
-  },
+  entry: path.resolve(__dirname, 'index.js'),
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -31,17 +28,52 @@ let config = {
   module: {
     rules: [
       {
-        test: /\.svg/,
-        use: {
-          loader: 'svg-url-loader',
-          options: {}
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
         }
       },
       {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/fonts/[name].[ext]'
+            }
+          }
+        ],
+        exclude: path.resolve(__dirname, 'assets/images'),
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/images/[name].[ext]'
+            }
+          }
+        ],
+        include: path.resolve(__dirname, 'assets/images'),
+        exclude: path.resolve(__dirname, 'assets/fonts'),
+      },
+      {
+        test: /\.svg/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: { extract: true },
+          },
+          'svgo-loader',
+        ],
+        include: path.resolve(__dirname, 'assets/images'),
+      },
+      {
         test: /\.pug$/,
-        use: extractHtml.extract({
-          use: ['file-loader?name=[name].html', 'pug-html-loader?pretty&exports=true']
-        }),
+        use:  ['html-loader', 'pug-html-loader?pretty&exports=true']
       },
       {
         test: /\.scss$/,
@@ -67,8 +99,14 @@ let config = {
     ]
   },
   plugins: [
+    new SpriteLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'index.html',
+      inject: 'head',
+      template: path.resolve(__dirname, './templates/index.pug'),
+    }),
     new webpack.LoaderOptionsPlugin({
-      minimize: true,
+      //minimize: true,
       debug: true,
       options: {
         postcss: [
@@ -78,8 +116,22 @@ let config = {
         ],
       }
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      Tether: "tether",
+      "window.Tether": "tether",
+      Popper: ['popper.js', 'default'],
+      Button: "exports-loader?Button!bootstrap/js/dist/button",
+      Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",
+      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+      Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
+      Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
+      Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
+      Util: "exports-loader?Util!bootstrap/js/dist/util"
+    }),
     extractStyles,
-    extractHtml,
   ]
 }
 
