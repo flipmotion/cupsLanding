@@ -2,9 +2,13 @@
   padding: 70px 0;
 
   &--text {
+    @extend .rr;
     margin: 0;
     font-size: 30px;
     color: #000;
     line-height: 1.2;
+  }
+  .white {
+    color: #fff;
   }
 }
