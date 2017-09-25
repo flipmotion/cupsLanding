@@ -40,10 +40,6 @@
     display: inline-block;
   }
 
-  &-md {
-    padding: 15px 34px;
-  }
-
   &-order {
     border-color: #e5e5e5;
     padding: 10px 30px;
@@ -53,5 +49,14 @@
       color: #fff;
       border-color: #313131;
     }
+  }
+  &-md {
+    padding: 15px 34px;
+  }
+
+  &-sm {
+    padding: 10px 15px;
+    min-width: 62px;
+    font-size: 11px;
   }
 }

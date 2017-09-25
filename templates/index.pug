@@ -297,9 +297,118 @@ html
                 ul
                   li Наличными в этажах
                   li Банковским переводом
-                p Мы пришлем реквизиты и сумму к оплате. <br> Банк может взымать комиссию.
+                p Мы пришлем реквизиты и сумму к оплате. <br> Банк может взымать комиссию
+    .content.block-6
+      form.order
+        .steps
+          .container
+            .row
+              .col
+                .steps-wrap
+                  .steps-item.active
+                    .steps-item__position
+                      p 1
+                    .steps-item__title
+                      p Выбор изделия 
+                  .steps-item
+                    .steps-item__position
+                      p 2
+                    .steps-item__title
+                      p Нитки и размер вышивки
+                  .steps-item
+                    .steps-item__position
+                      p 3
+                    .steps-item__title
+                      p Изображения и контакты
+        .container
+          .step-block
+            .row
+              .col-xs-12.col-sm-12.col-md-2.col-lg-2.d-none.d-md-block.d-lg-block
+              .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                .dress
+                  p.dress-title.text-uppercase На чем вышивать? :
+                  .dress-item
+                    input(type="radio" name="dress")#dress-1
+                    label(for='dress-1') 
+                      span
+                        include ../assets/images/svg/baseball-cap.svg
+                      span.text-uppercase бейсболка
+                  .dress-item
+                    input(type="radio" name="dress")#dress-2
+                    label(for='dress-2') 
+                      span
+                        include ../assets/images/svg/snapback.svg
+                      span.text-uppercase snapback
+                  .dress-item
+                    input(type="radio" name="dress")#dress-3
+                    label(for='dress-3') 
+                      span
+                        include ../assets/images/svg/trucker-hat.svg
+                      span.text-uppercase trucker hat
+                  .dress-item
+                    input(type="radio" name="dress")#dress-4
+                    label(for='dress-4') 
+                      span
+                        include ../assets/images/svg/cap.svg
+                      span.text-uppercase Шапка
+                  .dress-item
+                    input(type="radio" name="dress")#dress-5
+                    label(for='dress-5') 
+                      span
+                        include ../assets/images/svg/bomber.svg
+                      span.text-uppercase Бомбер
+                  .dress-item
+                    input(type="radio" name="dress")#dress-6
+                    label(for='dress-6') 
+                      span
+                        include ../assets/images/svg/your-dress.svg
+                      span.text-uppercase Ваша одежда
+              .col-xs-12.col-sm-12.col-md-6.col-lg-5.my-flex
+                .dress-option
+                  p.dress-option__title Классическая бейсболка с изогнутым козырьком и регулиремым ремешком
+                  p.dress-title.mb-25.text-uppercase Нвыберите цвет :
+                  .color-set
+                    .color-item
+                      input(type="radio" name="color")#color-1
+                      label(for='color-1').black
+                    .color-item
+                      input(type="radio" name="color")#color-2
+                      label(for='color-2').gray
+                    .color-item
+                      input(type="radio" name="color")#color-3
+                      label(for='color-3').red
+                    .color-item
+                      input(type="radio" name="color")#color-4
+                      label(for='color-4').blue
+                    .color-item
+                      input(type="radio" name="color")#color-5
+                      label(for='color-5').pink
+                    .color-item
+                      input(type="radio" name="color")#color-6
+                      label(for='color-6').green
+                    .color-item
+                      input(type="radio" name="color")#color-7
+                      label(for='color-7').grad
+                        span.half-black
+                  p.dress-title.mb-25.text-uppercase выберите размер :
+                  .size-set
+                    button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.text-uppercase
+                      span xs
+                    button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.text-uppercase
+                      span s
+                    button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.text-uppercase
+                      span m
+                    button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.text-uppercase
+                      span l
+                    button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.text-uppercase
+                      span xl
+                    button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.text-uppercase
+                      span One size
+                .step-next
+                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                    span Продолжить
+                  p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
 
-    //- order
 
     .content.block-7
       .container
