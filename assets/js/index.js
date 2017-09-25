@@ -1,4 +1,4 @@
 // Application javascript ES6;
-import isotopeGrid from './isotopeSetting';
+import isotopeGrid from './isotopeGrid';
 
 $(document).ready(isotopeGrid);
