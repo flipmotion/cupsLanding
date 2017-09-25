@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 96.635594 61.734242"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="baseball-cap.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="235.4722"
+     inkscape:cy="-229.55696"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-43.531312,-56.600243)">
+    <g
+       id="g30"
+       transform="matrix(-0.03910156,0,0,0.03806421,156.04238,-12.407806)">
+      <g
+         id="g14"
+         transform="matrix(0.1,0,0,-0.1,0,4096)"
+         style="stroke:none">
+        <path
+           id="path12"
+           d="m 13855.06,22811.621 c -111,-40 -205,-127 -258,-239 -29,-62 -32,-75 -31,-162 1,-65 8,-114 21,-157 l 20,-61 -146,-7 c -985,-43 -1778,-168 -2616,-410 -1997.0004,-577 -3782.0003,-1804 -5019.0003,-3450 -104,-138 -201,-272 -219,-302 -6,-9 32,-32 121,-77 682,-342 1251,-815 1601,-1331 308,-453 471,-914 522,-1469 11,-119 9,-580 -3,-591 -3,-3 -820,61 -1817,143 -997,81 -1814,145 -1817,141 -6,-11 -41,-253 -63,-444 -42,-356 -70,-722 -86,-1111 l -5,-141 57,-6 c 32,-4 2317,-176 5077.9999,-382 2761.0004,-207 5029.0004,-378 5040.0004,-380 11,-2 277,-157 590,-343 314,-186 2210,-1315 4215,-2506.9998 2005,-1191.9997 3703,-2200.9997 3774,-2241.9997 658,-379 1392,-606 2146,-664 198,-15 677,-6 855,15 1131,140 2061,639 2710,1456 95,119 247,343 249,367 1,13 -660,408 -2687,1607.9995 -1969,1164 -2682,1591 -2664,1593 23,3 25,8 31,85 21,264 27,425 33,903 7,628 -7,1083 -38,1234 -23,111 -29,142 -69,390 -77,467 -208,982 -414,1625 -45,143 -93,294 -106,335 -12,41 -65,170 -117,285 -971,2157 -2748,3871 -5017,4840 -627,267 -1317,481 -1986,615 -118,24 -216,44 -218,46 -2,1 11,23 28,50 36,57 63,128 79,205 43,206 -128,436 -354,479 -65,12 -1172,80 -1295,80 -46,-1 -94,-8 -125,-19 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         id="text16"
+         font-weight="bold"
+         font-size="5px"
+         y="4111"
+         x="0"
+         style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#000000">Created by Dumitriu Robert</text>
+      <text
+         id="text18"
+         font-weight="bold"
+         font-size="5px"
+         y="4116"
+         x="0"
+         style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#000000">from the Noun Project</text>
+    </g>
+  </g>
+</svg>
