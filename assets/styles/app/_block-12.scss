@@ -1,0 +1,28 @@
+.block-12 {
+  @extend .gp-m;
+  background: url(../images/block-12-bg.jpg) center bottom no-repeat;
+  background-size: cover;
+  padding: 55px 0 45px;
+
+  &-title {
+    font-size: 25px;
+    margin: 0 0 20px;
+    color: #fff;
+  }
+
+  &-subtitle {
+    font-size: 25px;
+    margin: 0 0 30px;
+    color: #fff;
+  }
+
+  &-text {
+    font-size: 13px;
+    margin: 0 0 30px;
+    color: #fff;
+  }
+
+  .btn-light {
+    margin-top: 20px;
+  }
+}
