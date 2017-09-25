@@ -1,0 +1,44 @@
+.block-10 {
+  background: url(../images/block-10-bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding-bottom: 55px;
+
+  &-item {
+
+    &__media {
+      height: 66px;
+      line-height: 66px;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+
+      &--title {
+        @extend .gp-m;
+        font-size: 13px;
+        color: #fff;
+        margin: 0 0 15px;
+      }
+      &--text {
+        @extend .gp-n;
+        font-size: 13px;
+        color: rgba(255,255,255, 0.7);
+        line-height: 1.5;
+        display: block;
+
+        &:hover,
+        &:focus,
+        &:visited,
+        &:active {
+          color: rgba(255,255,255, 0.7);
+          text-decoration: none;
+        }
+      }
+
+      .phone {
+        font-size: 20px;
+        margin-top: - 5px;
+      }
+    }
+  }
+}
