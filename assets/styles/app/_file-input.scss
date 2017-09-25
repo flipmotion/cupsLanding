@@ -1,0 +1,31 @@
+.custom-file-control {
+  border-radius: 20px;
+  margin: 0 !important;
+  white-space: nowrap;
+
+  &::before {
+    @extend .gp-n !optional;
+
+    font-size: 12px;
+    align-items: center;
+    background: 0 0;
+    border: 0;
+    content: attr(data-text);
+    display: flex;
+    left: 30px;
+    margin: 0;
+  }
+
+  &::after {
+    background: url('../images/svg/noun_1014504_cc.svg') center center no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.custom-file {
+  overflow: hidden;
+}

@@ -1,0 +1,65 @@
+<!-- Modal -->
+#call.modal.fade(
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="call"
+  aria-hidden="true"
+)
+  .modal-dialog.modal-lg(role="document")
+    .container
+      .row.align-items-center.justify-content-center
+        .col-md-8
+          .modal-content
+            .modal-header
+              h5.modal-title.text-center Оформить заявку
+              button.close(
+                type="button"
+                data-dismiss="modal"
+                aria-label="Close"
+              )
+                span(aria-hidden="true") &times;
+            .modal-body
+              form.modal-form
+                .row
+                  .col-xs-12.col-md-6
+                    .form-group
+                      label.modal-form__label
+                        span Ваше имя
+                        span.required (Обязательно)
+                      input.form-control(type='text')
+                    .form-group
+                      label.modal-form__label
+                        span Телефон
+                        span.required (Обязательно)
+                      input.form-control(type='tel' data-input="phone" placeholder="+7 (___) ___-__-__")
+                    .form-group
+                      label.modal-form__label
+                        span E-mail
+                        span.required (Обязательно)
+                      input.form-control(type='email' data-input="email")
+
+                  .col-xs-12.col-md-6
+                    .form-group
+                      label.modal-form__label
+                        span Сообщение
+                      textarea.form-control(type="text" rows="1")
+                    .row
+                      .col-sm-6
+                        .form-group
+                          label.custom-file
+                            input.custom-file-input(type="file" accept="image/x-png,image/jpeg")
+                            span.custom-file-control(data-text="Прикрепите фaйл")
+                      .col-sm-6
+                        ul
+                          li загрузите .png или .jpg
+                          li максимальный размер файла 8мб
+                .row
+                  .col.text-center
+                    button(type="submit").btn.btn-action.btn-primary ОТПРАВИТЬ
+                .row
+                  .col.text-center
+                    p Нажимая кнопку, вы даете согласие на обработку своих персональных данных
+
+
+            .modal-footer
+              button.btn.btn-secondary(data-dismiss="modal") Close

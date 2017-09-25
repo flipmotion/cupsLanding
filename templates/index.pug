@@ -33,7 +33,7 @@ html
               div
                 p.header-phone +7 999 211 88 77
               div
-                button(type="button").btn.btn-light.btn-action.text-uppercase
+                button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.text-uppercase
                   span ЗАКАЗАТЬ ВЫШИВКУ
                   span
                     include ../assets/images/svg/noun_799228_cc.svg
@@ -528,5 +528,6 @@ html
               .block-10-item__description
                 p.block-10-item__description--title.text-uppercase E-MAIL
                 a(href="mailto:someone@example.com").block-10-item__description--text info@snapbackcustoms.ru
+  include includes/modal
 
 

@@ -110,7 +110,7 @@ var config = {
       Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
       Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
       Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
-      Util: "exports-loader?Util!bootstrap/js/dist/util"
+      Util: "exports-loader?Util!bootstrap/js/dist/util",
     }),
   ],
 };
