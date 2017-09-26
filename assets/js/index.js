@@ -156,12 +156,27 @@ $(document).ready(() => {
     },
 
     submitHandler: (form, event) => {
-      event.stopPropagation();
-      $('#call').modal('hide');
-      $('#thx').modal('show');
-      setTimeout(()=>{
-        $('#thx').modal('hide');
-      }, 1000)
+      const url = 'url';
+      //const data = $(form).serialize();
+      const data = new FormData(form);
+
+      const success = () => {
+        $('#call').modal('hide');
+        $('#thx').modal('show');
+
+        setTimeout(() => {
+          $('#thx').modal('hide');
+        }, 1000);
+      }
+
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        success: success,
+      });
+
+      event.preventDefault();
     }
   });
 
@@ -538,11 +553,27 @@ $(document).ready(() => {
       },
 
       submitHandler: (form, event) => {
-        event.stopPropagation();
-        $('#thx').modal('show');
-        setTimeout(() => {
-          $('#thx').modal('hide');
-        }, 1000)
+        const url = 'url';
+        //const data = $(form).serialize();
+        const data = new FormData(form);
+
+        const success = () => {
+          $('#call').modal('hide');
+          $('#thx').modal('show');
+
+          setTimeout(() => {
+            $('#thx').modal('hide');
+          }, 1000);
+        }
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: data,
+          success: success,
+        });
+
+        event.preventDefault();
       },
     }
   });
