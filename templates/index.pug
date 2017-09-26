@@ -429,7 +429,70 @@ html
                         p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
               .msf-view
                 .step-block
-                  input(type="text" name="test")
+                  .row.step-block-row
+                    .col-xs-12.col-sm-12.col-md-3.col-lg-3
+                      .photo-item
+                        .photo-item__media
+                          img(src="../assets/images/photo-item-1.png")
+                        .photo-item__description
+                          p Изображение <br/>ниток
+                    .col-xs-12.col-sm-12.col-md-9.col-lg-9
+                      p.dress-title.mb-25.text-uppercase выберите размер :
+                      .thread-set
+                        input(type="radio" name="thread" data-errorContainer="")#thread-1
+                        label(for='thread-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Матовые
+                        input(type="radio" name="thread" data-errorContainer="")#thread-2
+                        label(for='thread-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Глянцевые
+                        input(type="radio" name="thread" data-errorContainer="")#thread-3
+                        label(for='thread-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Металлизированные
+                        input(type="radio" name="thread" data-errorContainer="")#thread-4
+                        label(for='thread-4').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span меняющие цвет
+                        input(type="radio" name="thread" data-errorContainer="")#thread-5
+                        label(for='thread-5').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Объемная вышивка
+                        input(type="radio" name="thread" data-errorContainer="")#thread-6
+                        label(for='thread-6').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span светящиеся в темноте
+                      p.thread-set__description Здесь может быть краткое описание ниток
+                  .row.step-block-row
+                    .col-xs-12.col-sm-12.col-md-3.col-lg-3
+                      .photo-item
+                        .photo-item__media
+                          img(src="../assets/images/photo-item-2.png")
+                        .photo-item__description
+                          p Фото сторон <br> изделия
+                    .col-xs-12.col-sm-12.col-md-9.col-lg-9
+                      p.dress-title.mb-25.text-uppercase Место вышивки
+                      .thread-set
+                        input(type="radio" name="thread" data-errorContainer="")#thread-1
+                        label(for='thread-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Лицевая сторона
+                        input(type="radio" name="thread" data-errorContainer="")#thread-2
+                        label(for='thread-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Оборотная сторона
+                        input(type="radio" name="thread" data-errorContainer="")#thread-3
+                        label(for='thread-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                          span Боковая сторона
+                      p.dress-title.mb-25.text-uppercase Размер вышивки (ширина х высота)
+                      .place-size
+                        .place-size__field
+                          input.form-control(type="text")
+                          span x
+                          input.form-control(type="text")
+                          span см
+                        .place-size__description
+                          p.thread-set__description На кепке с лицевой стороны max 17 х 7,5 см
+                          p.thread-set__description На кепке с обратной стороны max 5 х 5 см
+                      .step-next
+                        button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                          span Продолжить
+                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
+
+
               .msf-view
                 .step-block
                   input(type="tel" name="phone")
