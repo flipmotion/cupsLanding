@@ -62,13 +62,10 @@ let config = {
       },
       {
         test: /\.svg/,
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: { extract: true },
-          },
-        ],
-        include: path.resolve(__dirname, 'assets/images'),
+        exclude: /node_modules/,
+        use: {
+          loader: 'svg-url-loader',
+        }
       },
       {
         test: /\.pug$/,
@@ -98,6 +95,11 @@ let config = {
     ]
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false
+      }
+    }),
     new SpriteLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'index.html',

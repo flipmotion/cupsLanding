@@ -1,10 +1,32 @@
 // Import grid;
+import isotope from 'isotope-layout';
 import Inputmask from "inputmask";
-import isotopeGrid from './isotopeGrid';
-
 
 // Init isotope grid; 
-$(document).ready(isotopeGrid);
+$(document).ready(() => {
+  const ISOTOPE_GRID = '.js-isotopeGrid';
+  const ISOTOPE_CONTROLS = '.js-isotopeBtns';
+  const ISOTOPE_GRID_ITEM = '.js-gridItem';
+
+  const isotopeSettings = {
+    itemSelector: ISOTOPE_GRID_ITEM,
+    layoutMode: 'fitRows',
+  }
+
+  const $grid = $(ISOTOPE_GRID);
+  const $controls = $(ISOTOPE_CONTROLS);
+
+  const isotopeFilter = ({ currentTarget: key }) => $(key).data('filter');
+
+  const iso = new isotope(
+    ISOTOPE_GRID,
+    isotopeSettings,
+    );
+
+  $controls.on('click', 'button', event => iso.arrange({
+    filter: isotopeFilter(event)
+  }));
+});
 
 // Show more 
 const $items = $('.js-moreProducts');
