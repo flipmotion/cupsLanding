@@ -333,25 +333,17 @@ $(document).ready(() => {
 
     validate: {
       rules: {
-        dressTest: {
+        dress: {
           required: true,
         },
 
-        dress: {
+        size: {
           required: true,
         },
 
         color: {
           required: true,
         },
-
-        test: {
-          required: true,
-        },
-
-        phone: {
-          required: true,
-        }
       },
 
       messages: {
@@ -359,29 +351,19 @@ $(document).ready(() => {
           required: "Это обязательное поле",
         },
 
+        size: {
+          required: "Это обязательное поле",
+        },
+
         color: {
           required: "Это обязательное поле",
         },
-
-        test: {
-          required: "Это обязательное поле",
-        },
-
-        phone: {
-          required: "Это обязательное поле",
-        }
       },
 
-      errorContainer: '#errorContainer1, #errorContainer2',
-      errorLabelContainer: '#errorContainer1 li',
-
       errorPlacement: (error, element) => {
+        const { errorcontainer } = $(element).data();
         error.addClass("help-block");
-        if ( element.prop("type") === "checkbox" ) {
-          error.insertAfter( element.parent("label"));
-        } else {
-          error.insertAfter(element);
-        }
+        $(errorcontainer).append(error);
       },
 
       highlight: (element, errorClass, validClass) => {
