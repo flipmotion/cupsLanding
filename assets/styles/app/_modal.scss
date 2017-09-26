@@ -14,6 +14,43 @@
     border: 0;
   }
 
+  &-header {
+    display: block;
+    position: relative;
+
+    .close {
+      position: absolute;
+      right: -85px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: url(../images/svg/close.svg) center center no-repeat;
+      background-size: cover;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    h5 {
+      margin-top: 30px;
+    }
+    .modal-call-title {
+      margin-bottom: 50px;
+    }
+    .thx-title {
+      @extend .gp-n;
+      margin-top: 15px;
+      margin-bottom: 45px;
+      font-size: 30px;
+      color: #464646;
+      font-weight: 400;
+    }
+  }
+
   &-header,
   &-footer {
     border: 0;
@@ -100,5 +137,16 @@
       outline: none;
       box-shadow: none;
     }
+  }
+}
+
+.thx-text {
+  @extend .gp-n;
+  font-size: 14px;
+  color: #969798;
+
+  &-logo {
+    display: inline-block;
+    margin: 0 15px;
   }
 }
