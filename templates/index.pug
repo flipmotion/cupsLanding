@@ -494,12 +494,52 @@ html
                         button(type="button" id="step3").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
                           span Продолжить
                         p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
-
-
               .msf-view
                 .step-block
+
+                  .row
+                    .col-xs-12.col-sm-12.col-md-5.col-lg-5.ml-auto
+                      label.btn.btn-light.btn-action.btn-upload.text-uppercase
+                        span
+                          include ../assets/images/svg/clip.svg
+                        span Прикрепить файл
+                        input(type="file").upload-file
+                      ul.upload-instruction
+                        li.thread-set__description Загрузите .png или .jpg
+                        li.thread-set__description Маленькую картинку нельзя вышить в большом размере
+                        li.thread-set__description Максимальный размер файла 8мб
+                        li.thread-set__description Использование изображения не должно нарушать авторских прав
+                      .user-lettering
+                        div
+                          input(type="checkbox")#user-lettering
+                          label(for="user-lettering")
+                        div
+                          p.user-lettering__title.text-uppercase Вышить надпись
+                          p.thread-set__description.mb-25 Мы предложим на выбор 500 шрифтов
+                          .form-group
+                            input(type="text" placeholder="Введите вашу надпись").form-control.user-lettering__field
+                      p.thread-set__description Если вы сомневаетесь в результате — мы пришлем вам <br> примерный макет
+                    .col-xs-12.col-sm-12.col-md-5.col-lg-5.mr-auto
+                      .form-group
+                        input(type="text" placeholder="Ваше имя").form-control.user-lettering__field
+                      .form-group
+                        input(type="text" placeholder="Телефон").form-control.user-lettering__field
+                      .form-group
+                        input(type="text" placeholder="Почта").form-control.user-lettering__field
+                      .form-group
+                        textarea(placeholder="Укажите любую информацию, которая важна для вашего заказа" rows="6").form-control.user-lettering__field.reset-height
+                      p.thread-set__description.mb-50 Нажимая «Оформить заказ» вы соглашаетесь с 
+                        span.data-politic политикой обработки персональных данных
+                      .step-next
+                        button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                          span Продолжить
+                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
+                      p.after-order.mb-25 После оформления заказа мы свяжемсяс вами для подтверждения
+                       
+
                   input(type="tel" name="phone")
                   button(type='submit').btn.btn-primary#submitHack Sumbmit
+
             .msf-navigation
     .content.block-7
       .container
