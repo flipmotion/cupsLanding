@@ -17,6 +17,10 @@
   &-content {
     background: 0 0;
     border: 0;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
   }
 
   &-header {
@@ -69,6 +73,10 @@
   .modal-title {
     @extend %gp-n !optional;
     font-family: 29px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
   }
 
   .d-block-custom {
