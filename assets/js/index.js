@@ -135,7 +135,11 @@ $(document).ready(() => {
 
     submitHandler: (form, event) => {
       event.stopPropagation();
-      console.log('Submited form!');
+      $('#call').modal('hide');
+      $('#thx').modal('show');
+      setTimeout(()=>{
+        $('#thx').modal('hide');
+      }, 1000)
     }
   });
 
@@ -510,10 +514,14 @@ $(document).ready(() => {
         .addClass( "has-success")
         .removeClass("has-danger");
       },
-    }
-  });
 
-  $(document).on("msf:viewChanged", function(event, data){
-    console.log(data);
+      submitHandler: (form, event) => {
+        event.stopPropagation();
+        $('#thx').modal('show');
+        setTimeout(() => {
+          $('#thx').modal('hide');
+        }, 1000)
+      },
+    }
   });
 });

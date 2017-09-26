@@ -237,7 +237,7 @@ html
                   span.rubl
                     include ../assets/images/svg/rubl.svg
             div.text-center
-                button(type="button" data-toggle="modal" data-target="#thx").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
+                button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
                   span ЗАКАЗАТЬ КРУТУЮ ВЫШИВКУ
     #block-5.content.block-5
       .container
@@ -548,7 +548,7 @@ html
           .col-xs-12.col-sm-12.col-md-8.col-lg-8
             p.block-7-title Сомневаетесь в выборе?  Оставьте заявку — мы свяжемся с вами и поможем!
           .col-xs-12.col-sm-12.col-md-3.col-lg-3.text-center
-            button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
+            button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
                   span ЗАКАЗАТЬ КРУТУЮ ВЫШИВКУ
     #block-8.content.block-8
       .container
@@ -585,7 +585,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
           .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-2 all")
             .product-item
@@ -600,7 +600,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
           .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-3 all")
             .product-item
@@ -615,7 +615,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
           .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-4 all")
             .product-item
@@ -630,7 +630,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
           .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-5 all")
             .product-item
@@ -645,7 +645,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
           .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-2 all")
             .product-item
@@ -660,7 +660,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
           .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-3 all")
             .product-item
@@ -675,7 +675,7 @@ html
                     span.rubl
                       include ../assets/images/svg/rubl.svg
                 div
-                  button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+                  button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
     #block-9.content.block-9
       .container
@@ -788,7 +788,7 @@ html
                 div
                   img(src="../assets/images/inst-logo-3.png")
               div
-                button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-md-2.btn-action-border.text-uppercase
+                a(href="https://www.instagram.com/snapback_customs/" target="_blank").btn.btn-light.btn-action.btn-action-md-2.btn-action-border.text-uppercase
                   span ПЕРЕЙТИ В ПРОФИЛЬ
         .row
           .col
@@ -810,7 +810,7 @@ html
             p.block-12-text Ось собственного вращения даёт большую проекцию на оси, чем апериодический гирокомпас. Будем, как и раньше, предполагать, что курс относительно трансформирует небольшой гироинтегратор.
             p.block-12-text Степень свободы, в первом приближении, эллиптично позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует центр сил. Необходимым и достаточным условием отрицательности действительных частей корней рассматриваемого характеристического уравнения является то, что объект определяет уходящий кожух.
             p.block-12-text В самом общем случае линеаризация перманентно определяет альтиметр. Непосредственно из законов сохранения следует, что тангаж заставляет перейти к более сложной системе дифференциальных уравнений, если добавить поплавковый альтиметр.
-            button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
+            button(type="button" data-toggle="modal" data-target="#call").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
               span ЗАКАЗАТЬ КРУТУЮ ВЫШИВКУ
     .footer
       .footer-lvl-1
@@ -843,7 +843,7 @@ html
                   a(href="#").footer-info__text.border-bottom Политика обработки персональных данных
                 div
                   p.footer-info__text Разработка сайта — 
-                    a(href="#").footer-info__text Horse Heads
+                    a(href="http://horseheads.ru/" target="_blank").footer-info__text Horse Heads
 
   include includes/modal
 
