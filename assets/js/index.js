@@ -156,7 +156,7 @@ $(document).ready(() => {
     },
 
     submitHandler: (form, event) => {
-      const url = 'url';
+      const url = 'simpleForm.php';
       //const data = $(form).serialize();
       const data = new FormData(form);
 
@@ -553,7 +553,7 @@ $(document).ready(() => {
       },
 
       submitHandler: (form, event) => {
-        const url = 'url';
+        const url = 'longForm.php';
         //const data = $(form).serialize();
         const data = new FormData(form);
 
