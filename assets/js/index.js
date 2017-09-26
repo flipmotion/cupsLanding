@@ -14,6 +14,21 @@ $(document).ready(() => {
   Validation();
   Validation_methods();
 
+  //header
+  $(window).on("scroll touchmove", () => {
+    $('.header').toggleClass('sticky', $(document).scrollTop() > 0);
+  });
+
+  // smooth scroll
+  const offsetTopHeader = $('.header').innerHeight();
+
+  $('a.smooth').click(function () {
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - offsetTopHeader
+    }, 1000);
+    return false;
+  });
+
   $items.css({
     display: 'none',
   })
