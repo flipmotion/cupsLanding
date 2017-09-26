@@ -25,7 +25,7 @@ $(document).ready(() => {
   $('a.smooth').click(function () {
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top - offsetTopHeader
-    }, 1000);
+    }, 350);
     return false;
   });
 
