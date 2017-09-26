@@ -1,12 +1,22 @@
 .modal {
+  -webkit-overflow-scrolling: touch;
+
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
   &-dialog {
-    align-items: center;
     background: $white;
-    display: flex;
     height: 100%;
     margin: 0;
     max-width: 100%;
     width: 100%;
+    display: table;
+
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
 
     @include media-breakpoint-down(md) {
       display: block;

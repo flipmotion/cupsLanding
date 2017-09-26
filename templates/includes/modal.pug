@@ -1,90 +1,86 @@
 #call.modal.fade(
   tabindex="-1"
-  role="dialog"
-  aria-labelledby="call"
-  aria-hidden="true"
 )
   .modal-dialog.modal-lg(role="document")
-    .container
-      .row.align-items-center.justify-content-center.d-block-custom
-        .col-md-8
-          .modal-content
-            .modal-header
-              h5.modal-title.modal-call-title.text-center Оформить заявку
-              button.close(
-                type="button"
-                data-dismiss="modal"
-                aria-label="Close"
-              )
-                span(aria-hidden="true")
-            .modal-body
-              form.modal-form
-                .row
-                  .col-xs-12.col-md-6
-                    .form-group
-                      label.modal-form__label
-                        span Ваше имя
-                        span.required (Обязательно)
-                      input.form-control(type='text' name="user" required)
-                    .form-group
-                      label.modal-form__label
-                        span Телефон
-                        span.required (Обязательно)
-                      input.form-control(type='tel' data-input="phone" placeholder="+7 (___) ___-__-__" name="phone" required)
-                    .form-group
-                      label.modal-form__label
-                        span E-mail
-                        span.required (Обязательно)
-                      input.form-control(type='email' data-input="email" name="email" required)
+    div
+      .container
+        .row.align-items-center.justify-content-center.d-block-custom
+          .col-md-8
+            .modal-content
+              .modal-header
+                h5.modal-title.modal-call-title.text-center Оформить заявку
+                button.close(
+                  type="button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                )
+                  span(aria-hidden="true")
+              .modal-body
+                form.modal-form
+                  .row
+                    .col-xs-12.col-md-6
+                      .form-group
+                        label.modal-form__label
+                          span Ваше имя
+                          span.required (Обязательно)
+                        input.form-control(type='text' name="user" required)
+                      .form-group
+                        label.modal-form__label
+                          span Телефон
+                          span.required (Обязательно)
+                        input.form-control(type='tel' data-input="phone" placeholder="+7 (___) ___-__-__" name="phone" required)
+                      .form-group
+                        label.modal-form__label
+                          span E-mail
+                          span.required (Обязательно)
+                        input.form-control(type='email' data-input="email" name="email" required)
 
-                  .col-xs-12.col-md-6
-                    .form-group
-                      label.modal-form__label
-                        span Сообщение
-                      textarea.form-control(type="text" rows="1" name="message")
-                    .row
-                      .col-lg-12.offset-file-input.d-xs-none.d-sm-none.d-md-none
-                      .col-sm-6.col-md-12.col-lg-12.col-xl-6
-                        .form-group.custom-file__form-group
-                          label.custom-file
-                            input.custom-file-input(
-                              type="file"
-                              name="picture"
-                            )
-                            span.custom-file-control(data-text="Прикрепите фaйл")
-                      .col-sm-6.col-md-12.col-lg-12.col-xl-6
-                        ul
-                          li загрузите .png или .jpg
-                          li максимальный размер файла 8мб
-                .row
-                  .col.text-center
-                    p.policy Нажимая кнопку, вы даете согласие на обработку своих персональных данных
-                .row
-                  .col.text-center
-                    button(type="submit").btn.btn-primary ОТПРАВИТЬ
+                    .col-xs-12.col-md-6
+                      .form-group
+                        label.modal-form__label
+                          span Сообщение
+                        textarea.form-control(type="text" rows="1" name="message")
+                      .row
+                        .col-lg-12.offset-file-input.d-xs-none.d-sm-none.d-md-none
+                        .col-sm-6.col-md-12.col-lg-12.col-xl-6
+                          .form-group.custom-file__form-group
+                            label.custom-file
+                              input.custom-file-input(
+                                type="file"
+                                name="picture"
+                              )
+                              span.custom-file-control(data-text="Прикрепите фaйл")
+                        .col-sm-6.col-md-12.col-lg-12.col-xl-6
+                          ul
+                            li загрузите .png или .jpg
+                            li максимальный размер файла 8мб
+                  .row
+                    .col.text-center
+                      p.policy Нажимая кнопку, вы даете согласие на обработку своих персональных данных
+                  .row
+                    .col.text-center
+                      button(type="submit").btn.btn-primary ОТПРАВИТЬ
 
 #thx.modal.fade(
   tabindex="-1"
-  role="dialog"
-  aria-labelledby="thx"
-  aria-hidden="true"
 )
   .modal-dialog.modal-lg(role="document")
-    .container
-      .row.align-items-center.justify-content-center.d-block-custom
-        .col-md-8
-          .modal-content
-            .modal-header
-              h5.modal-title.thx-title Уважаемый(ая) Павел, заявка отправлена
-              button.close(
-                type="button"
-                data-dismiss="modal"
-                aria-label="Close"
-              )
-                span(aria-hidden="true")
-            .modal-body
-              p.thx-text В скором времени мы свяжется с вами по указанному номеру +7 (902) 111-11-11 для консультации
-              .thx-text
-                span С уважением, команда 
-                span.thx-text-logo
-                  img(src="../assets/images/modal-logo.png")
+    div
+      .container
+        .row.align-items-center.justify-content-center.d-block-custom
+          .col-md-8
+            .modal-content
+              .modal-header
+                h5.modal-title.thx-title Уважаемый(ая) Павел, заявка отправлена
+                button.close(
+                  type="button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                )
+                  span(aria-hidden="true")
+              .modal-body
+                p.thx-text В скором времени мы свяжется с вами по указанному номеру +7 (902) 111-11-11 для консультации
+                .thx-text
+                  span С уважением, команда 
+                  span.thx-text-logo
+                    img(src="../assets/images/modal-logo.png")

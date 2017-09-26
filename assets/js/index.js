@@ -36,6 +36,25 @@ $(document).ready(() => {
   Validation();
   Validation_methods();
 
+  var stackModal = 0;
+  $(document).on('show.bs.modal', '.modal', function (event) {
+      var zIndex = 1040 + (10 * $('.modal:visible').length);
+      $(this).css('z-index', zIndex);
+      stackModal++;
+      setTimeout(function() {
+          $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+      }, 0);
+  });
+
+  $(document).on('hidden.bs.modal', '.modal', function (event) {
+      stackModal--;
+      if(stackModal > 0) {
+          $('body').addClass("modal-open");
+      } else {
+          $('body').removeClass("modal-open");
+      }
+  });
+
   $.validator.addMethod('filesize', function (value, element, param) {
     return this.optional(element) || (element.files[0].size <= param)
   }, 'File size must be less than {0}');
