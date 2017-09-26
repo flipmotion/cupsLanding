@@ -69,6 +69,10 @@
 
 .step-block {
   padding-top: 50px;
+
+  &-row {
+    margin-bottom: 45px;
+  }
 }
 
 .dress {
@@ -281,5 +285,83 @@
   width: 180px;
   height: 180px;
   margin: 0 auto;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+
+  &__media {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    text-align: center;
+    p {
+      @extend .gp-m;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.3);
+      margin: 0;
+    }
+  }
+}
+
+.thread-set {
+  display: flex;
+  flex-wrap: wrap;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input[type=radio]:checked + label {
+    background: #313131;
+    color: #fff;
+    border-color: #313131;
+  }
+
+  &__description {
+    @extend .gp-n;
+    font-size: 13px;
+    margin: 0;
+    color: #bababa;
+  }
+}
+
+.place-size {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+  &__field {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+
+    input {
+      width: 80px;
+      height: 40px;
+      background: #eee;
+      border-radius: 6px;
+      border-color: transparent;
+
+      &:focus {
+        border-color: transparent;
+        box-shadow: none;
+        background: #eee;
+      }
+    }
+
+    span {
+      @extend .gp-m;
+      font-size: 12px;
+      color: #a4a4a5;
+      display: inline-block;
+      padding: 0 8px;
+    }
+  }
 }
