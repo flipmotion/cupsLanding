@@ -174,6 +174,10 @@ $(document).ready(() => {
         url: url,
         data: data,
         success: success,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        contentType: 'multipart/form-data',
       });
 
       event.preventDefault();
@@ -571,6 +575,10 @@ $(document).ready(() => {
           url: url,
           data: data,
           success: success,
+          processData: false,
+          contentType: false,
+          mimeType: 'multipart/form-data',
+          contentType: 'multipart/form-data',
         });
 
         event.preventDefault();
