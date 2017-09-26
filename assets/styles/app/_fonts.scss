@@ -59,3 +59,7 @@
 .rr {
   font-family: 'RobotoRegular';
 }
+
+body {
+  @extend %gp-n;
+}

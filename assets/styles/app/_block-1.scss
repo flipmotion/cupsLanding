@@ -19,6 +19,7 @@
       background: #fff;
       line-height: 1.2;
       margin-top: 10px;
+      padding: 0 10px;
     }
   }
 
@@ -80,7 +81,7 @@
 
   &__man {
     position: absolute;
-    right: -90px;
+    right: -145px;
     bottom: -85px;
     z-index: 2;
     max-height: 720px;
