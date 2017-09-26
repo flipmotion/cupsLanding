@@ -11,4 +11,14 @@
   .white {
     color: #fff;
   }
+
+  &__icon {
+    margin-bottom: 30px;
+    margin-top: -20px;
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: #ccc;
+    }
+  }
 }
