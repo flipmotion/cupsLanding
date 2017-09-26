@@ -319,6 +319,15 @@ $(document).ready(() => {
       }
     });
 
+    //hack 
+    $('#step2').on('click', event => {
+      form.nextNavButton.click();
+    });
+
+    $('#step3').on('click', event => {
+      form.nextNavButton.click();
+    });
+
     form.backNavButton.click(function () {
       var view = form.getActiveView();
       var i = form.views.index(view);
