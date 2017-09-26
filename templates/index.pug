@@ -16,18 +16,18 @@ html
               div.collapse.navbar-collapse#navbarNav
                 ul.navbar-nav
                   li.nav-item.active
-                    a(href="#").nav-link.text-uppercase РАБОТЫ 
+                    a(href="#block-3").smooth.nav-link.text-uppercase РАБОТЫ 
                       span.sr-only (current)
                   li.nav-item
-                    a(href="#").nav-link.text-uppercase ЦЕНЫ
+                    a(href="#block-4").smooth.nav-link.text-uppercase ЦЕНЫ
                   li.nav-item
-                    a(href="#").nav-link.text-uppercase МЕРЧ
+                    a(href="#block-8").smooth.nav-link.text-uppercase МЕРЧ
                   li.nav-item
-                    a(href="#").nav-link.text-uppercase ДОСТАВКА И ОПЛАТА
+                    a(href="#block-5").smooth.nav-link.text-uppercase ДОСТАВКА И ОПЛАТА
                   li.nav-item
-                    a(href="#").nav-link.text-uppercase FAQ
+                    a(href="#block-9").smooth.nav-link.text-uppercase FAQ
                   li.nav-item
-                    a(href="#").nav-link.text-uppercase КОНТАКТЫ
+                    a(href="#block-10").smooth.nav-link.text-uppercase КОНТАКТЫ
           .col-xs-12.col-sm-12.col-md-4.col-lg-4
             .header-action
               div
@@ -83,7 +83,7 @@ html
                 include ../assets/images/svg/noun_842994_cc.svg
               .block-2-item__description
                 p Не можете определиться? Мы поможем! Проконсультируем по всем вопросама
-    .content.block-3
+    #block-3.content.block-3
       .container
         .row
           .col
@@ -209,7 +209,7 @@ html
             a(href="#").show-more(class="js-showMore")
               include ../assets/images/svg/noun_1020876_cc.svg
             p.show-more__description ПОКАЗАТЬ БОЛЬШЕ
-    .content.block-4
+    #block-4.content.block-4
       .container
         img(src="../assets/images/pacan-2.png").pacan-2
         .row
@@ -239,7 +239,7 @@ html
             div.text-center
                 button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
                   span ЗАКАЗАТЬ КРУТУЮ ВЫШИВКУ
-    .content.block-5
+    #block-5.content.block-5
       .container
         .row
           .col
@@ -424,7 +424,7 @@ html
                         #errorContainer3.has-danger
                       .errors-container
                       .step-next
-                        button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                        button(type="button" id="step2").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
                           span Продолжить
                         p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
               .msf-view
@@ -439,25 +439,26 @@ html
                     .col-xs-12.col-sm-12.col-md-9.col-lg-9
                       p.dress-title.mb-25.text-uppercase выберите размер :
                       .thread-set
-                        input(type="radio" name="thread" data-errorContainer="")#thread-1
+                        input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-1
                         label(for='thread-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Матовые
-                        input(type="radio" name="thread" data-errorContainer="")#thread-2
+                        input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-2
                         label(for='thread-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Глянцевые
-                        input(type="radio" name="thread" data-errorContainer="")#thread-3
+                        input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-3
                         label(for='thread-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Металлизированные
-                        input(type="radio" name="thread" data-errorContainer="")#thread-4
+                        input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-4
                         label(for='thread-4').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span меняющие цвет
-                        input(type="radio" name="thread" data-errorContainer="")#thread-5
+                        input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-5
                         label(for='thread-5').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Объемная вышивка
-                        input(type="radio" name="thread" data-errorContainer="")#thread-6
+                        input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-6
                         label(for='thread-6').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span светящиеся в темноте
                       p.thread-set__description Здесь может быть краткое описание ниток
+                      #errorContainer4.has-danger
                   .row.step-block-row
                     .col-xs-12.col-sm-12.col-md-3.col-lg-3
                       .photo-item
@@ -468,31 +469,34 @@ html
                     .col-xs-12.col-sm-12.col-md-9.col-lg-9
                       p.dress-title.mb-25.text-uppercase Место вышивки
                       .thread-set
-                        input(type="radio" name="thread" data-errorContainer="")#thread-1
-                        label(for='thread-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                        input(type="radio" name="face" data-side="front" data-errorContainer="#errorContainer5")#face-1
+                        label(for='face-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Лицевая сторона
-                        input(type="radio" name="thread" data-errorContainer="")#thread-2
-                        label(for='thread-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                        input(type="radio" name="face" data-side="back" data-errorContainer="#errorContainer5")#face-2
+                        label(for='face-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Оборотная сторона
-                        input(type="radio" name="thread" data-errorContainer="")#thread-3
-                        label(for='thread-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
+                        input(type="radio" name="face" data-side="aside" data-errorContainer="#errorContainer5")#face-3
+                        label(for='face-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Боковая сторона
+                      #errorContainer5.has-danger
                       p.dress-title.mb-25.text-uppercase Размер вышивки (ширина х высота)
                       .place-size
                         .place-size__field
-                          input.form-control(type="text")
+                          input.form-control(type="text" name="from" id="from" data-errorContainer="#errorContainer6")
                           span x
-                          input.form-control(type="text")
+                          input.form-control(type="text" name="to" id="to"  data-errorContainer="#errorContainer6")
                           span см
                         .place-size__description
                           p.thread-set__description На кепке с лицевой стороны max 17 х 7,5 см
                           p.thread-set__description На кепке с обратной стороны max 5 х 5 см
+                      #errorContainer6.has-danger.d-flex.flex-column
                       .step-next
-                        button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                        button(type="button" id="step3").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
                           span Продолжить
                         p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
               .msf-view
                 .step-block
+
                   .row
                     .col-xs-12.col-sm-12.col-md-5.col-lg-5.ml-auto
                       label.btn.btn-light.btn-action.btn-upload.text-uppercase
@@ -532,6 +536,10 @@ html
                         p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
                       p.after-order.mb-25 После оформления заказа мы свяжемсяс вами для подтверждения
                        
+
+                  input(type="tel" name="phone")
+                  button(type='submit').btn.btn-primary#submitHack Sumbmit
+
             .msf-navigation
     .content.block-7
       .container
@@ -541,7 +549,7 @@ html
           .col-xs-12.col-sm-12.col-md-3.col-lg-3.text-center
             button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
                   span ЗАКАЗАТЬ КРУТУЮ ВЫШИВКУ
-    .content.block-8
+    #block-8.content.block-8
       .container
         .row
           .col
@@ -668,7 +676,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-    .content.block-9
+    #block-9.content.block-9
       .container
         .row
           .col
@@ -724,7 +732,7 @@ html
 
                 #collapse-5.collapse(role="tabpanel" aria-labelledby="heading-5")
                   .card-block Абсолютно сходящийся ряд нейтрализует минимум. Критерий интегрируемости иррационален. Подынтегральное выражение, в первом приближении, соответствует стремящийся функциональный анализ. Тройной интеграл выведен.
-    .content.block-10
+    #block-10.content.block-10
       .container
         .row
           .col
@@ -759,6 +767,13 @@ html
               .block-10-item__description
                 p.block-10-item__description--title.text-uppercase E-MAIL
                 a(href="mailto:someone@example.com").block-10-item__description--text info@snapbackcustoms.ru
+    .content.map
+      iframe(
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A7fbdb27a668dc25a6add4739e26f8fd8da3f2d23f7534c03c62b8c5f5d97fad1&amp;lang=ru_RU&amp;scroll=false&amp;source=constructor"
+        width="100%"
+        height="500px"
+        frameborder="0"
+      )
     .content.block-11
       .container
         .row

@@ -14,6 +14,21 @@ $(document).ready(() => {
   Validation();
   Validation_methods();
 
+  //header
+  $(window).on("scroll touchmove", () => {
+    $('.header').toggleClass('sticky', $(document).scrollTop() > 0);
+  });
+
+  // smooth scroll
+  const offsetTopHeader = $('.header').innerHeight();
+
+  $('a.smooth').click(function () {
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - offsetTopHeader
+    }, 350);
+    return false;
+  });
+
   $items.css({
     display: 'none',
   })
@@ -319,6 +334,20 @@ $(document).ready(() => {
       }
     });
 
+    //hack 
+    $('#step2').on('click', event => {
+      form.nextNavButton.click();
+    });
+
+    $('#step3').on('click', event => {
+      form.nextNavButton.click();
+    });
+
+    $('#submitHack').on('click', event => {
+      form.submitNavButton.click();
+      event.stopPropagation();
+    });
+
     form.backNavButton.click(function () {
       var view = form.getActiveView();
       var i = form.views.index(view);
@@ -326,6 +355,9 @@ $(document).ready(() => {
       form.setActiveView(i-1);
     });
   };
+
+  const isFrontSide = () => $('[data-side="front"]').is(':checked');
+  const isBackSide = () => $('[data-side="back"]').is(':checked');
 
   $(".msf").multiStepForm({
     activeIndex: 0,
@@ -344,6 +376,24 @@ $(document).ready(() => {
         color: {
           required: true,
         },
+
+        thread: {
+          required: true,
+        },
+
+        face: {
+          required: true,
+        },
+
+        from: {
+          required: true,
+          range: element => isFrontSide() ? [0, 17] : isBackSide() ? [0, 5] : [0, 17],
+        },
+
+        to: {
+          required: true,
+          range: element => isFrontSide() ? [0, 7.5] : isBackSide() ? [0, 5] : [0, 17],
+        }
       },
 
       messages: {
@@ -357,6 +407,24 @@ $(document).ready(() => {
 
         color: {
           required: "Это обязательное поле",
+        },
+
+        thread: {
+          required: "Это обязательное поле",
+        },
+
+        face: {
+          required: "Это обязательное поле",
+        },
+
+        from: {
+          required: "Это обязательное поле",
+          range: "Некорректный диапозон",
+        },
+
+        to: {
+          required: "Это обязательное поле",
+          range: "Некорректный диапозон",
         },
       },
 
