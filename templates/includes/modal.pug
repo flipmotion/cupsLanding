@@ -10,13 +10,13 @@
         .col-md-8
           .modal-content
             .modal-header
-              h5.modal-title.text-center Оформить заявку
+              h5.modal-title.modal-call-title.text-center Оформить заявку
               button.close(
                 type="button"
                 data-dismiss="modal"
                 aria-label="Close"
               )
-                span(aria-hidden="true") &times;
+                span(aria-hidden="true")
             .modal-body
               form.modal-form
                 .row
@@ -62,3 +62,29 @@
                 .row
                   .col.text-center
                     button(type="submit").btn.btn-primary ОТПРАВИТЬ
+
+#thx.modal.fade(
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="thx"
+  aria-hidden="true"
+)
+  .modal-dialog.modal-lg(role="document")
+    .container
+      .row.align-items-center.justify-content-center
+        .col-md-8
+          .modal-content
+            .modal-header
+              h5.modal-title.thx-title Уважаемый(ая) Павел, заявка отправлена
+              button.close(
+                type="button"
+                data-dismiss="modal"
+                aria-label="Close"
+              )
+                span(aria-hidden="true")
+            .modal-body
+              p.thx-text В скором времени мы свяжется с вами по указанному номеру +7 (902) 111-11-11 для консультации
+              .thx-text
+                span С уважением, команда 
+                span.thx-text-logo
+                  img(src="../assets/images/modal-logo.png")
