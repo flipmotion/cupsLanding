@@ -140,6 +140,12 @@
 
   &-option {
 
+    .has-danger {
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+    
     &__title {
       @extend .gp-n;
       font-size: 12px;
@@ -155,7 +161,6 @@
   &-set {
     display: flex;
     align-items: center;
-    margin-bottom: 35px;
   }
 
   &-item {
@@ -327,7 +332,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   &__field {
     display: flex;
@@ -356,6 +361,12 @@
       padding: 0 8px;
     }
   }
+}
+
+.file-input-text {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .mb-25 {
@@ -401,6 +412,13 @@
 .user-lettering {
   display: flex;
   margin-bottom: 30px;
+  
+  .has-danger label {
+    width: 100%;
+    margin: 0;
+    border: none;
+    font-size: 12px;
+  }
 
   label {
     width: 30px;

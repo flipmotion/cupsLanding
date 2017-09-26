@@ -372,7 +372,7 @@ html
                               span
                                 include ../assets/images/svg/your-dress.svg
                               span.text-uppercase Ваша одежда
-                      #errorContainer1.has-danger
+                      #errorContainer1.has-danger.small
                     .col-xs-12.col-sm-12.col-md-6.col-lg-5.my-flex
                       .dress-option
                         p.dress-option__title Классическая бейсболка с изогнутым козырьком и регулиремым ремешком
@@ -458,7 +458,7 @@ html
                         label(for='thread-6').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span светящиеся в темноте
                       p.thread-set__description Здесь может быть краткое описание ниток
-                      #errorContainer4.has-danger
+                      #errorContainer4.has-danger.small
                   .row.step-block-row
                     .col-xs-12.col-sm-12.col-md-3.col-lg-3
                       .photo-item
@@ -478,7 +478,7 @@ html
                         input(type="radio" name="face" data-side="aside" data-errorContainer="#errorContainer5")#face-3
                         label(for='face-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Боковая сторона
-                      #errorContainer5.has-danger
+                      #errorContainer5.has-danger.small
                       p.dress-title.mb-25.text-uppercase Размер вышивки (ширина х высота)
                       .place-size
                         .place-size__field
@@ -489,21 +489,25 @@ html
                         .place-size__description
                           p.thread-set__description На кепке с лицевой стороны max 17 х 7,5 см
                           p.thread-set__description На кепке с обратной стороны max 5 х 5 см
-                      #errorContainer6.has-danger.d-flex.flex-column
+                      #errorContainer6.has-danger.d-flex.flex-column.small
                       .step-next
                         button(type="button" id="step3").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
                           span Продолжить
-                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
+                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 2 из 3
               .msf-view
                 .step-block
-
                   .row
                     .col-xs-12.col-sm-12.col-md-5.col-lg-5.ml-auto
-                      label.btn.btn-light.btn-action.btn-upload.text-uppercase
+                      label(id="file-input").btn.btn-light.btn-action.btn-upload.text-uppercase
                         span
                           include ../assets/images/svg/clip.svg
-                        span Прикрепить файл
-                        input(type="file").upload-file
+                        span.file-input-text Прикрепить файл
+                        input(
+                          type="file"
+                          name="picture"
+                          data-errorContainer="#errorContainer10"
+                        ).upload-file
+                      #errorContainer10.has-danger
                       ul.upload-instruction
                         li.thread-set__description Загрузите .png или .jpg
                         li.thread-set__description Маленькую картинку нельзя вышить в большом размере
@@ -511,35 +515,32 @@ html
                         li.thread-set__description Использование изображения не должно нарушать авторских прав
                       .user-lettering
                         div
-                          input(type="checkbox")#user-lettering
+                          input(type="checkbox" name="userLettering")#user-lettering
                           label(for="user-lettering")
                         div
                           p.user-lettering__title.text-uppercase Вышить надпись
                           p.thread-set__description.mb-25 Мы предложим на выбор 500 шрифтов
                           .form-group
-                            input(type="text" placeholder="Введите вашу надпись").form-control.user-lettering__field
+                            input(type="text" placeholder="Введите вашу надпись" name="userLetteringText" data-errorContainer="#errorContainer11").form-control.user-lettering__field
+                          #errorContainer11.has-danger
                       p.thread-set__description Если вы сомневаетесь в результате — мы пришлем вам <br> примерный макет
                     .col-xs-12.col-sm-12.col-md-5.col-lg-5.mr-auto
                       .form-group
-                        input(type="text" placeholder="Ваше имя").form-control.user-lettering__field
+                        input(type="text" name="user" placeholder="Ваше имя" data-errorContainer="#errorContainer7").form-control.user-lettering__field
                       .form-group
-                        input(type="text" placeholder="Телефон").form-control.user-lettering__field
+                        input(type="tel" name="phone" data-input="phone" placeholder="Телефон" data-errorContainer="#errorContainer7").form-control.user-lettering__field
                       .form-group
-                        input(type="text" placeholder="Почта").form-control.user-lettering__field
+                        input(type="email" name="email" placeholder="Почта" data-errorContainer="#errorContainer7").form-control.user-lettering__field
                       .form-group
-                        textarea(placeholder="Укажите любую информацию, которая важна для вашего заказа" rows="6").form-control.user-lettering__field.reset-height
-                      p.thread-set__description.mb-50 Нажимая «Оформить заказ» вы соглашаетесь с 
+                        textarea(name="message" placeholder="Укажите любую информацию, которая важна для вашего заказа" rows="6").form-control.user-lettering__field.reset-height
+                      p.thread-set__description Нажимая «Оформить заказ» вы соглашаетесь с 
                         span.data-politic политикой обработки персональных данных
+                      #errorContainer7.has-danger.d-flex.flex-column
                       .step-next
-                        button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
-                          span Продолжить
-                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 1 из 3
-                      p.after-order.mb-25 После оформления заказа мы свяжемсяс вами для подтверждения
-                       
-
-                  input(type="tel" name="phone")
-                  button(type='submit').btn.btn-primary#submitHack Sumbmit
-
+                        button(type="button" id="submitHack").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                          span Оформить заказ
+                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 3 из 3
+                      p.after-order.mb-25 После оформления заказа мы свяжемся с вами для подтверждения
             .msf-navigation
     .content.block-7
       .container

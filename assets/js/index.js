@@ -14,6 +14,10 @@ $(document).ready(() => {
   Validation();
   Validation_methods();
 
+  $.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || (element.files[0].size <= param)
+  }, 'File size must be less than {0}');
+
   //header
   $(window).on("scroll touchmove", () => {
     $('.header').toggleClass('sticky', $(document).scrollTop() > 0);
@@ -51,8 +55,13 @@ $(document).ready(() => {
       files,
     }
   }) => {
-    const { name } = files[0]
-    return name
+    let name;
+    if (files[0] !== undefined) {
+      return name = files[0].name;
+    } else {
+      name = 'Выберите файл';
+    }
+    return name;
   }
 
   $('.custom-file-input').on('change', function(event) {
@@ -62,11 +71,19 @@ $(document).ready(() => {
     textField.attr('data-text', fileName)
   })
 
+  $('#file-input input').on('change', function(event) {
+    const fileName = handleFileSelectText(event)
+    const textField = $(this).prev()
+
+    textField.text(fileName)
+  })
+
   // init validation
   $('.modal-form').validate({
     rules: {
       picture: {
-        accept: 'image/x-png,image/jpeg'
+        extension: 'png|jpg|jpeg',
+        filesize: 1048576 * 8,
       }
     },
 
@@ -86,7 +103,8 @@ $(document).ready(() => {
       },
 
       picture: {
-        accept: 'Не верный формат файла',
+        extension: 'Не верный формат файла',
+        filesize: 'Файл превышает 8 мб',
       }
     },
 
@@ -393,7 +411,29 @@ $(document).ready(() => {
         to: {
           required: true,
           range: element => isFrontSide() ? [0, 7.5] : isBackSide() ? [0, 5] : [0, 17],
-        }
+        },
+
+        user: {
+          required: true,
+        },
+
+        phone: {
+          required: true,
+        },
+
+        email: {
+          required: true,
+          email: true,
+        },
+
+        picture: {
+          extension: 'png|jpg|jpeg',
+          filesize: 1048576 * 8,
+        },
+
+        userLetteringText: {
+          required: () => $('#user-lettering').is(':checked')
+        },
       },
 
       messages: {
@@ -426,6 +466,29 @@ $(document).ready(() => {
           required: "Это обязательное поле",
           range: "Некорректный диапозон",
         },
+
+        user: {
+          required: "Это обязательное поле",
+        },
+
+        phone: {
+          required: "Это обязательное поле",
+          tel: "Введите валидный номер телефона",
+        },
+
+        email: {
+          required: "Это обязательное поле",
+          email: "Введите валидный email адрес",
+        },
+
+        picture: {
+          extension: 'Не верный формат файла',
+          filesize: 'Файл превышает 8 мб',
+        },
+
+        userLetteringText: {
+          required: "Это обязательное поле",
+        }
       },
 
       errorPlacement: (error, element) => {
