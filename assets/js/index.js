@@ -86,19 +86,19 @@ $(document).ready(() => {
   function hasScrolled() {
     var st = $(document).scrollTop();
 
-    if (st > navbarHeight) {
+    if (st > (navbarHeight)) {
       $('.header').addClass('sticky');
     } else {
-      $('.header').removeClass('sticky')
+      $('.header').removeClass('sticky');
     }
 
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
     if (st > lastScrollTop && st > navbarHeight) {
-      $('.header').addClass('sticky-up');
+      $('.header').removeClass('sticky-up');
     } else {
       if(st + $(window).height() < $(document).height()) {
-        $('.header').removeClass('sticky-up');
+        $('.header').addClass('sticky-up');
       }
     }
     lastScrollTop = st;
