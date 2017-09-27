@@ -1,10 +1,24 @@
 .navbar {
   margin-left: -20px;
+
+  @include media-breakpoint-down(sm) {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // min-width: 768px;
+    margin-left: 0;
+    padding: 0;
+  }
 }
 
 .navbar-nav {
   justify-content: space-between;
   flex:1;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    text-align: center;
+  }
 }
 
 .nav-link {

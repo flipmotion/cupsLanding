@@ -19,8 +19,8 @@
     }
 
     @include media-breakpoint-down(md) {
-      display: block;
-      height: auto;
+      //display: block;
+      //height: auto;
     }
   }
 
@@ -91,7 +91,7 @@
 
   .d-block-custom {
     @include media-breakpoint-down(md) {
-      display: block;
+      //display: block;
     } 
   }
 }

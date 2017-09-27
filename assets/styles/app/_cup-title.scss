@@ -1,12 +1,20 @@
 .cup-title {
   padding: 70px 0;
 
-  &--text {
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0;
+  }
+
+  &__text {
     @extend .rr;
     margin: 0;
     font-size: 30px;
     color: #000;
     line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 26px
+    }
   }
   .white {
     color: #fff;

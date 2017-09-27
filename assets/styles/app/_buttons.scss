@@ -10,19 +10,37 @@
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+
+  @include media-breakpoint-down(lg) {
+    padding: 7px 14px;
+  }
+
   span {
     display: block;
     &:first-child {
       padding-right: 5px;
+
+       @include media-breakpoint-down(lg) {
+        padding-right: 3px;
+      }
     }
     &:last-child {
       padding-left: 5px;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 3px;
+      }
     }
   }
   svg {
     width: 18px;
     height: 18px;
     fill: #ccc;
+
+    @include media-breakpoint-down(lg) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &:hover {
@@ -52,10 +70,17 @@
   }
   &-md {
     padding: 15px 34px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 15px 30px;
+    }
   }
 
   &-md-2 {
     padding: 12px 25px;
+    @include media-breakpoint-down(lg) {
+      padding: 12px 25px !important;
+    }
   }
 
   &-border {
