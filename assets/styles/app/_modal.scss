@@ -1,17 +1,36 @@
 .modal {
+  -webkit-overflow-scrolling: touch;
+
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
   &-dialog {
-    align-items: center;
     background: $white;
-    display: flex;
     height: 100%;
     margin: 0;
     max-width: 100%;
     width: 100%;
+    display: table;
+
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    @include media-breakpoint-down(md) {
+      //display: block;
+      //height: auto;
+    }
   }
 
   &-content {
     background: 0 0;
     border: 0;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
   }
 
   &-header {
@@ -32,6 +51,11 @@
       &:focus,
       &:active {
         outline: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        right: 0;
+        top: 15px;
       }
     }
 
@@ -59,6 +83,16 @@
   .modal-title {
     @extend %gp-n !optional;
     font-family: 29px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .d-block-custom {
+    @include media-breakpoint-down(md) {
+      //display: block;
+    } 
   }
 }
 

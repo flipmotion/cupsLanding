@@ -1,10 +1,32 @@
 // Import grid;
+import isotope from 'isotope-layout';
 import Inputmask from "inputmask";
-import isotopeGrid from './isotopeGrid';
-
 
 // Init isotope grid; 
-$(document).ready(isotopeGrid);
+$(document).ready(() => {
+  const ISOTOPE_GRID = '.js-isotopeGrid';
+  const ISOTOPE_CONTROLS = '.js-isotopeBtns';
+  const ISOTOPE_GRID_ITEM = '.js-gridItem';
+
+  const isotopeSettings = {
+    itemSelector: ISOTOPE_GRID_ITEM,
+    layoutMode: 'fitRows',
+  }
+
+  const $grid = $(ISOTOPE_GRID);
+  const $controls = $(ISOTOPE_CONTROLS);
+
+  const isotopeFilter = ({ currentTarget: key }) => $(key).data('filter');
+
+  const iso = new isotope(
+    ISOTOPE_GRID,
+    isotopeSettings,
+    );
+
+  $controls.on('click', 'button', event => iso.arrange({
+    filter: isotopeFilter(event)
+  }));
+});
 
 // Show more 
 const $items = $('.js-moreProducts');
@@ -13,6 +35,25 @@ const $btnShowItems = $('.js-showMore');
 $(document).ready(() => {
   Validation();
   Validation_methods();
+
+  var stackModal = 0;
+  $(document).on('show.bs.modal', '.modal', function (event) {
+      var zIndex = 1040 + (10 * $('.modal:visible').length);
+      $(this).css('z-index', zIndex);
+      stackModal++;
+      setTimeout(function() {
+          $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+      }, 0);
+  });
+
+  $(document).on('hidden.bs.modal', '.modal', function (event) {
+      stackModal--;
+      if(stackModal > 0) {
+          $('body').addClass("modal-open");
+      } else {
+          $('body').removeClass("modal-open");
+      }
+  });
 
   $.validator.addMethod('filesize', function (value, element, param) {
     return this.optional(element) || (element.files[0].size <= param)
@@ -134,8 +175,31 @@ $(document).ready(() => {
     },
 
     submitHandler: (form, event) => {
-      event.stopPropagation();
-      console.log('Submited form!');
+      const url = 'simpleForm.php';
+      //const data = $(form).serialize();
+      const data = new FormData(form);
+
+      const success = () => {
+        $('#call').modal('hide');
+        $('#thx').modal('show');
+
+        setTimeout(() => {
+          $('#thx').modal('hide');
+        }, 1000);
+      }
+
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        success: success,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        contentType: 'multipart/form-data',
+      });
+
+      event.preventDefault();
     }
   });
 
@@ -510,10 +574,34 @@ $(document).ready(() => {
         .addClass( "has-success")
         .removeClass("has-danger");
       },
-    }
-  });
 
-  $(document).on("msf:viewChanged", function(event, data){
-    console.log(data);
+      submitHandler: (form, event) => {
+        const url = 'longForm.php';
+        //const data = $(form).serialize();
+        const data = new FormData(form);
+
+        const success = () => {
+          $('#call').modal('hide');
+          $('#thx').modal('show');
+
+          setTimeout(() => {
+            $('#thx').modal('hide');
+          }, 1000);
+        }
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: data,
+          success: success,
+          processData: false,
+          contentType: false,
+          mimeType: 'multipart/form-data',
+          contentType: 'multipart/form-data',
+        });
+
+        event.preventDefault();
+      },
+    }
   });
 });

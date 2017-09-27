@@ -62,14 +62,10 @@ let config = {
       },
       {
         test: /\.svg/,
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: { extract: true },
-          },
-          'svgo-loader',
-        ],
-        include: path.resolve(__dirname, 'assets/images'),
+        exclude: /node_modules/,
+        use: {
+          loader: 'svg-url-loader',
+        }
       },
       {
         test: /\.pug$/,
@@ -99,6 +95,11 @@ let config = {
     ]
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false
+      }
+    }),
     new SpriteLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'index.html',
@@ -106,7 +107,7 @@ let config = {
       template: path.resolve(__dirname, './templates/index.pug'),
     }),
     new webpack.LoaderOptionsPlugin({
-      //minimize: true,
+      minimize: true,
       debug: true,
       options: {
         postcss: [
@@ -122,6 +123,8 @@ let config = {
       "window.jQuery": "jquery",
       Tether: "tether",
       "window.Tether": "tether",
+      Validation: path.resolve(__dirname, 'node_modules/jquery-validation/dist/jquery.validate.js'),
+      Validation_methods: path.resolve(__dirname, 'node_modules/jquery-validation/dist/additional-methods.js'),
       Popper: ['popper.js', 'default'],
       Button: "exports-loader?Button!bootstrap/js/dist/button",
       Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",
@@ -129,7 +132,7 @@ let config = {
       Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
       Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
       Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
-      Util: "exports-loader?Util!bootstrap/js/dist/util"
+      Util: "exports-loader?Util!bootstrap/js/dist/util",
     }),
     extractStyles,
   ]
