@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 5;
   width: 100%;
   transition: 0.25s ease background;
 
@@ -11,12 +12,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: -15px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      transform: translateX(-40px);
+      padding-right: 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      transform: translateX(0);
+      padding-right: 0;
+      flex-direction: column;
+    }
   }
 
   &-phone {
     font-size: 16px;
     color: #fff;
     margin: 0;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin: 10px 0;
+    }
   }
 
   &.sticky {
@@ -36,12 +61,76 @@
       color: #000;
     }
   }
+}
+
+.order-mobile {
+  @include media-breakpoint-down(sm) {
+    order: 3;
+  }
+}
+
+.navbar-toggler {
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
 
   @include media-breakpoint-down(sm) {
-    //
+    position: absolute;
+    top: -38px;
+    right: 0;
+    z-index: 2;
   }
 
   @include media-breakpoint-down(xs) {
-    //
+    top: -26px;
+  }
+
+  .line {
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+}
+
+.sticky {
+
+  .line {
+    background: #000;
+  }
+}
+
+.mobile-header {
+  @media (min-width: 0px) and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: $white;
+
+    .btn-light {
+      border-color: rgba(#000, .1);
+    }
+
+    .header-phone,
+    .nav-link {
+      color: #000;
+    }
+    .line {
+      background: #000;
+    }
   }
 }

@@ -3,15 +3,17 @@ html
   head
     include includes/head
   body
-    .header
+    .header.mobile-header
       .container
         .row.align-items-center
-          .col-xs-12.col-sm-12.col-md-2.col-lg-2
+          .col-xs-12.col-sm-4.col-md-3.col-lg-2.text-center.text-sm-left.text-md-left.text-lg-left.text-xl-left
             img(src="../assets/images/logo.png").logo
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6
-            nav.navbar.navbar-expand-lg
+          .col-xs-12.col-sm-12.col-md-9.col-lg-6.order-mobile
+            nav.navbar.navbar-expand-md.navbar-expand-lg
               button(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation").navbar-toggler
-                span.navbar-toggler-icon
+                span.line
+                span.line
+                span.line
 
               div.collapse.navbar-collapse#navbarNav
                 ul.navbar-nav
@@ -28,7 +30,7 @@ html
                     a(href="#block-9").smooth.nav-link.text-uppercase FAQ
                   li.nav-item
                     a(href="#block-10").smooth.nav-link.text-uppercase КОНТАКТЫ
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+          .col-xs-12.col-sm-8.col-md-9.ml-md-auto.col-lg-4
             .header-action
               div
                 p.header-phone +7 999 211 88 77
@@ -46,7 +48,7 @@ html
               span вашей одежде
             p.block-1__subtitle Уникальность можно купить. <br> Доставим по всей России.
         .row
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6
+          .col-xs-12.col-sm-12.col-md-7.col-lg-6
             .block-1__info
               ul.block-1__info--social
                 li.block-1__info--social__item
@@ -64,7 +66,7 @@ html
                 span.block-1__info--address__text Лофт Проект Этажи, Лиговский пр-кт 74
     .content.block-2
       .container
-        .row.align-items-center
+        .row.align-items-center.align-items-md-start
           .col-xs-12.col-sm-12.col-md-4.col-lg-4
             .block-2-item
               .block-2-item__media
@@ -90,120 +92,118 @@ html
             .cup-title
               h2.cup-title__text.text-center Примеры готовых вышивок
         .row
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-1.jpg")
               .product-item__description
                 p.product-item__description--text Вышивка логотипа на бейсболке
                 p.product-item__description--option Матовые нити, 7х10 см
-        .js-moreProducts(style="display: none;")
-          .row
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .product-item
-                .product-item__media
-                  img(src="../assets/images/product-item-1.jpg")
-                .product-item__description
-                  p.product-item__description--text Вышивка логотипа на бейсболке
-                  p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3.js-moreProducts
+            .product-item
+              .product-item__media
+                img(src="../assets/images/product-item-1.jpg")
+              .product-item__description
+                p.product-item__description--text Вышивка логотипа на бейсболке
+                p.product-item__description--option Матовые нити, 7х10 см
         .row
           .col.text-center
             a(href="#").show-more(class="js-showMore")
@@ -213,7 +213,7 @@ html
       .container
         img(src="../assets/images/pacan-2.png").pacan-2
         .row
-          .col-xs-12.col-sm-12.col-md-7.col-lg-7
+          .col-xs-12.col-sm-12.col-md-10.mr-md-auto.ml-md-auto.mr-lg-0.ml-lg-0.col-lg-7
             h2.block-4__title.text-center Стоимость
             ul.price-list
               li.price-list__item
@@ -444,7 +444,7 @@ html
                         .photo-item__description
                           p Изображение <br/>ниток
                     .col-xs-12.col-sm-12.col-md-9.col-lg-9
-                      p.dress-title.mb-25.text-uppercase выберите размер :
+                      p.dress-title.mb-25.text-uppercase.text-center.text-md-left.text-lg-left.textxl-left выберите размер :
                       .thread-set
                         input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-1
                         label(for='thread-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
@@ -464,7 +464,7 @@ html
                         input(type="radio" name="thread" data-errorContainer="#errorContainer4")#thread-6
                         label(for='thread-6').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span светящиеся в темноте
-                      p.thread-set__description Здесь может быть краткое описание ниток
+                      p.thread-set__description.text-center.text-md-left.text-lg-left.textxl-left Здесь может быть краткое описание ниток
                       #errorContainer4.has-danger.small
                   .row.step-block-row
                     .col-xs-12.col-sm-12.col-md-3.col-lg-3
@@ -474,7 +474,7 @@ html
                         .photo-item__description
                           p Фото сторон <br> изделия
                     .col-xs-12.col-sm-12.col-md-9.col-lg-9
-                      p.dress-title.mb-25.text-uppercase Место вышивки
+                      p.dress-title.mb-25.text-uppercase.text-center.text-md-left.text-lg-left.textxl-left Место вышивки
                       .thread-set
                         input(type="radio" name="face" data-side="front" data-errorContainer="#errorContainer5")#face-1
                         label(for='face-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
@@ -486,7 +486,7 @@ html
                         label(for='face-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                           span Боковая сторона
                       #errorContainer5.has-danger.small
-                      p.dress-title.mb-25.text-uppercase Размер вышивки (ширина х высота)
+                      p.dress-title.mb-25.text-uppercase.text-cenetr.text-md-left.text-lg-left.textxl-left Размер вышивки (ширина х высота)
                       .place-size
                         .place-size__field
                           input.form-control(type="text" name="from" id="from" data-errorContainer="#errorContainer6")
@@ -530,31 +530,32 @@ html
                           .form-group
                             input(type="text" placeholder="Введите вашу надпись" name="userLetteringText" data-errorContainer="#errorContainer11").form-control.user-lettering__field
                           #errorContainer11.has-danger
-                      p.thread-set__description Если вы сомневаетесь в результате — мы пришлем вам <br> примерный макет
+                      p.thread-set__description Если вы сомневаетесь в результате — мы пришлем вам примерный макет
                     .col-xs-12.col-sm-12.col-md-5.col-lg-5.mr-auto
-                      .form-group
-                        input(type="text" name="user" placeholder="Ваше имя" data-errorContainer="#errorContainer7").form-control.user-lettering__field
-                      .form-group
-                        input(type="tel" name="phone" data-input="phone" placeholder="Телефон" data-errorContainer="#errorContainer7").form-control.user-lettering__field
-                      .form-group
-                        input(type="email" name="email" placeholder="Почта" data-errorContainer="#errorContainer7").form-control.user-lettering__field
-                      .form-group
-                        textarea(name="message" placeholder="Укажите любую информацию, которая важна для вашего заказа" rows="6").form-control.user-lettering__field.reset-height
-                      p.thread-set__description Нажимая «Оформить заказ» вы соглашаетесь с 
-                        span.data-politic политикой обработки персональных данных
-                      #errorContainer7.has-danger.d-flex.flex-column
-                      .step-next
-                        button(type="button" id="submitHack").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
-                          span Оформить заказ
-                        p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 3 из 3
-                      p.after-order.mb-25 После оформления заказа мы свяжемся с вами для подтверждения
+                      .form-wrap
+                        .form-group
+                          input(type="text" name="user" placeholder="Ваше имя" data-errorContainer="#errorContainer7").form-control.user-lettering__field
+                        .form-group
+                          input(type="tel" name="phone" data-input="phone" placeholder="Телефон" data-errorContainer="#errorContainer7").form-control.user-lettering__field
+                        .form-group
+                          input(type="email" name="email" placeholder="Почта" data-errorContainer="#errorContainer7").form-control.user-lettering__field
+                        .form-group
+                          textarea(name="message" placeholder="Укажите любую информацию, которая важна для вашего заказа" rows="6").form-control.user-lettering__field.reset-height
+                        p.thread-set__description Нажимая «Оформить заказ» вы соглашаетесь с 
+                          span.data-politic политикой обработки персональных данных
+                        #errorContainer7.has-danger.d-flex.flex-column
+                        .step-next
+                          button(type="button" id="submitHack").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
+                            span Оформить заказ
+                          p.dress-title.dress-title-xs.reset-margin.text-uppercase Шаг 3 из 3
+                        p.after-order.mb-25 После оформления заказа мы свяжемся с вами для подтверждения
             .msf-navigation
     .content.block-7
       .container
         .row.justify-content-between.align-items-center
-          .col-xs-12.col-sm-12.col-md-8.col-lg-8
+          .col-xs-12.col-sm-12.col-md-7.col-lg-8
             p.block-7-title Сомневаетесь в выборе?  Оставьте заявку — мы свяжемся с вами и поможем!
-          .col-xs-12.col-sm-12.col-md-3.col-lg-3.text-center
+          .col-xs-12.col-sm-12.col-md-5.col-lg-3.text-center
             button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.text-uppercase
                   span ЗАКАЗАТЬ КРУТУЮ ВЫШИВКУ
     #block-8.content.block-8
@@ -579,7 +580,7 @@ html
               button(type="button" data-filter=".case-5").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                 span дружко шоу
         .row.js-isotopeGrid
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-1 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-1 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -594,7 +595,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-2 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-2 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -609,7 +610,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-3 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-3 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -624,7 +625,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-4 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-4 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -639,7 +640,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-5 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-5 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -654,7 +655,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-2 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-2 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -669,7 +670,7 @@ html
                 div
                   button(type="button").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                     span Заказать
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3(class="js-gridItem case-3 all")
+          .col-xs-12.col-sm-6.col-md-4.col-lg-3(class="js-gridItem case-3 all")
             .product-item
               .product-item__media
                 img(src="../assets/images/product-item-2.jpg")
@@ -747,28 +748,28 @@ html
             .cup-title
               h2.cup-title__text.white.text-center Мы в Санкт-Петербурге
         .row
-          .col-xs-12.col-sm-12.col-md-3.col-lg-3
+          .col-xs-12.col-sm-12.col-md-6.col-lg-3
             .block-10-item.text-center
               .block-10-item__media
                 img(src="../assets/images/block-10-item-1.png")
               .block-10-item__description
                 p.block-10-item__description--title.text-uppercase КОНТАКТНЫЙ ТЕЛЕФОН
                 a.block-10-item__description--text.phone(href="tel:000000000") +7 999 211 88 77
-          .col-xs-12.col-sm-12.col-md-3.col-lg-3
+          .col-xs-12.col-sm-12.col-md-6.col-lg-3
             .block-10-item.text-center
               .block-10-item__media
                 img(src="../assets/images/block-10-item-2.png")
               .block-10-item__description
                 p.block-10-item__description--title.text-uppercase АДРЕС
                 p.block-10-item__description--text Лофт Проект Этажи, Лиговский пр-кт 74, нулевой этаж, желтый бокс
-          .col-xs-12.col-sm-12.col-md-3.col-lg-3
+          .col-xs-12.col-sm-12.col-md-6.col-lg-3
             .block-10-item.text-center
               .block-10-item__media
                 img(src="../assets/images/block-10-item-3.png")
               .block-10-item__description
                 p.block-10-item__description--title.text-uppercase ГРАФИК РАБОТЫ
                 p.block-10-item__description--text с 12.00 до 21.00, кроме вторника
-          .col-xs-12.col-sm-12.col-md-3.col-lg-3
+          .col-xs-12.col-sm-12.col-md-6.col-lg-3
             .block-10-item.text-center
               .block-10-item__media
                 img(src="../assets/images/block-10-item-4.png")
@@ -811,7 +812,7 @@ html
     .content.block-12
       .container
         .row
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6.ml-auto
+          .col-xs-12.col-sm-12.col-md-10.col-lg-6.ml-auto.mr-auto.mr-lg-0.text-center.text-md-left.text-lg-left.textxl-left
             h2.block-12-title.text-center.text-uppercase SNAPBACK CUSTOMS
             p.block-12-subtitle.text-center Вышивка на кепках, бейсболках и одежде
             p.block-12-text Ось собственного вращения даёт большую проекцию на оси, чем апериодический гирокомпас. Будем, как и раньше, предполагать, что курс относительно трансформирует небольшой гироинтегратор.
@@ -823,13 +824,13 @@ html
       .footer-lvl-1
         .container
           .row.align-items-center
-            .col-xs-12.col-sm-12.col-md-8.col-lg-8
+            .col-xs-12.col-sm-12.col-md-9.col-lg-9
               .footer-item
                 .footer-item__media
                   img(src="../assets/images/logo.png").logo
                 .footer-item__description
                   p Брендирование бейсболок и одежды в Санкт-Петербурге. <br>Доставка по всей России.
-            .col-xs-12.col-sm-12.col-md-4.col-lg-4
+            .col-xs-12.col-sm-12.col-md-3.col-lg-3
               ul.block-1__info--social.social-right
                 li.block-1__info--social__item
                   a(href="#").block-1__info--social__link.black

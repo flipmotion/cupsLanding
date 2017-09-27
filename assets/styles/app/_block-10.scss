@@ -5,6 +5,10 @@
 
   &-item {
 
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+
     &__media {
       height: 66px;
       line-height: 66px;

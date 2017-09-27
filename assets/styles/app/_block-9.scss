@@ -9,6 +9,10 @@
     border-bottom: 1px solid #e4e4e4;
     background: transparent;
     padding: 35px 0;
+
+    @include media-breakpoint-down(xs) {
+      padding: 25px 0;
+    }
     
 
     &:last-child {
@@ -31,6 +35,10 @@
       color: #000;
       text-decoration: none;
 
+      @include media-breakpoint-down(xs) {
+        font-size: 14px;
+      }
+
       .carat {
         display: inline-block;
         width: 38px;
@@ -44,6 +52,10 @@
         position: relative;
         margin-right: 45px;
         transition: 0.3s ease;
+
+        @include media-breakpoint-down(xs) {
+            margin-right: 15px;
+          }
 
         &:before {
           content: '-';
@@ -69,6 +81,10 @@
           text-align: center;
           transition: 0.3s ease;
 
+          @include media-breakpoint-down(xs) {
+            margin-right: 15px;
+          }
+
           &:before {
             content: '+';
             font-size: 20px;
@@ -91,6 +107,13 @@
     span {
       @extend .gp-m;
       color: #000;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 10px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 51px;
     }
   }
 }
