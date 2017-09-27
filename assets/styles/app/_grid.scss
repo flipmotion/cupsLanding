@@ -1,0 +1,13 @@
+.col-xs-4 {
+  @include media-breakpoint-down(xs) {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+.col-xs-8 {
+  @include media-breakpoint-down(xs) {
+    flex: 0 0 66.66666%;
+    max-width: 66.66666%;
+  }
+}
