@@ -38,31 +38,71 @@ $(document).ready(() => {
 
   var stackModal = 0;
   $(document).on('show.bs.modal', '.modal', function (event) {
-      var zIndex = 1040 + (10 * $('.modal:visible').length);
-      $(this).css('z-index', zIndex);
-      stackModal++;
-      setTimeout(function() {
-          $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-      }, 0);
+    var zIndex = 1040 + (10 * $('.modal:visible').length);
+    $(this).css('z-index', zIndex);
+    stackModal++;
+    setTimeout(function() {
+      $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+    }, 0);
   });
 
   $(document).on('hidden.bs.modal', '.modal', function (event) {
-      stackModal--;
-      if(stackModal > 0) {
-          $('body').addClass("modal-open");
-      } else {
-          $('body').removeClass("modal-open");
-      }
+    stackModal--;
+    if(stackModal > 0) {
+      $('body').addClass("modal-open");
+    } else {
+      $('body').removeClass("modal-open");
+    }
   });
+
+  setTimeout(() => {
+    $(document).scrollTop('0')
+  }, 300)
 
   $.validator.addMethod('filesize', function (value, element, param) {
     return this.optional(element) || (element.files[0].size <= param)
   }, 'File size must be less than {0}');
 
   //header
-  $(window).on("scroll touchmove", () => {
-    $('.header').toggleClass('sticky', $(document).scrollTop() > 0);
+  // $(window).on("scroll touchmove", () => {
+  //   $('.header').toggleClass('sticky', $(document).scrollTop() > 0);
+  // });
+  let didScroll;
+  let lastScrollTop = 0;
+  const delta = 5;
+  const navbarHeight = $('.header').outerHeight();
+
+  $(window).scroll(function(event){
+    didScroll = true;
   });
+
+  setInterval(function() {
+    if (didScroll) {
+      hasScrolled();
+      didScroll = false;
+    }
+  }, 250);
+
+  function hasScrolled() {
+    var st = $(document).scrollTop();
+
+    if (st > navbarHeight) {
+      $('.header').addClass('sticky');
+    } else {
+      $('.header').removeClass('sticky')
+    }
+
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+
+    if (st > lastScrollTop && st > navbarHeight) {
+      $('.header').addClass('sticky-up');
+    } else {
+      if(st + $(window).height() < $(document).height()) {
+        $('.header').removeClass('sticky-up');
+      }
+    }
+    lastScrollTop = st;
+  }
 
   // smooth scroll
   const offsetTopHeader = $('.header').innerHeight();
@@ -176,7 +216,6 @@ $(document).ready(() => {
 
     submitHandler: (form, event) => {
       const url = 'simpleForm.php';
-      //const data = $(form).serialize();
       const data = new FormData(form);
 
       const success = () => {
@@ -195,8 +234,6 @@ $(document).ready(() => {
         success: success,
         processData: false,
         contentType: false,
-        mimeType: 'multipart/form-data',
-        contentType: 'multipart/form-data',
       });
 
       event.preventDefault();
@@ -577,7 +614,6 @@ $(document).ready(() => {
 
       submitHandler: (form, event) => {
         const url = 'longForm.php';
-        //const data = $(form).serialize();
         const data = new FormData(form);
 
         const success = () => {
@@ -596,8 +632,6 @@ $(document).ready(() => {
           success: success,
           processData: false,
           contentType: false,
-          mimeType: 'multipart/form-data',
-          contentType: 'multipart/form-data',
         });
 
         event.preventDefault();
