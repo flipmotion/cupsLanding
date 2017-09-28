@@ -26,11 +26,18 @@ $(document).ready(() => {
   $controls.on('click', 'button', event => iso.arrange({
     filter: isotopeFilter(event)
   }));
+
+  $controls.each(function(i, buttonGroup) {
+    const $buttonGroup = $(buttonGroup);
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
 });
 
 // Show more 
-const $items = $('.js-moreProducts');
-const $btnShowItems = $('.js-showMore');
+
 
 $(document).ready(() => {
   Validation();
@@ -63,10 +70,6 @@ $(document).ready(() => {
     return this.optional(element) || (element.files[0].size <= param)
   }, 'File size must be less than {0}');
 
-  //header
-  // $(window).on("scroll touchmove", () => {
-  //   $('.header').toggleClass('sticky', $(document).scrollTop() > 0);
-  // });
   let didScroll;
   let lastScrollTop = 0;
   const delta = 5;
@@ -113,6 +116,9 @@ $(document).ready(() => {
     }, 350);
     return false;
   });
+
+  const $items = $('.js-moreProducts');
+  const $btnShowItems = $('.js-showMore');
 
   $items.css({
     display: 'none',
@@ -224,7 +230,7 @@ $(document).ready(() => {
 
         setTimeout(() => {
           $('#thx').modal('hide');
-        }, 1000);
+        }, 3000);
       }
 
       $.ajax({
@@ -504,15 +510,15 @@ $(document).ready(() => {
           required: true,
         },
 
-        from: {
-          required: true,
-          range: element => isFrontSide() ? [0, 17] : isBackSide() ? [0, 5] : [0, 17],
-        },
+        // from: {
+        //   required: true,
+        //   range: element => isFrontSide() ? [0, 17] : isBackSide() ? [0, 5] : [0, 17],
+        // },
 
-        to: {
-          required: true,
-          range: element => isFrontSide() ? [0, 7.5] : isBackSide() ? [0, 5] : [0, 17],
-        },
+        // to: {
+        //   required: true,
+        //   range: element => isFrontSide() ? [0, 7.5] : isBackSide() ? [0, 5] : [0, 17],
+        // },
 
         user: {
           required: true,
@@ -558,15 +564,15 @@ $(document).ready(() => {
           required: "Это обязательное поле",
         },
 
-        from: {
-          required: "Это обязательное поле",
-          range: "Некорректный диапозон",
-        },
+        // from: {
+        //   required: "Это обязательное поле",
+        //   range: "Некорректный диапозон",
+        // },
 
-        to: {
-          required: "Это обязательное поле",
-          range: "Некорректный диапозон",
-        },
+        // to: {
+        //   required: "Это обязательное поле",
+        //   range: "Некорректный диапозон",
+        // },
 
         user: {
           required: "Это обязательное поле",
@@ -622,7 +628,7 @@ $(document).ready(() => {
 
           setTimeout(() => {
             $('#thx').modal('hide');
-          }, 1000);
+          }, 3000);
         }
 
         $.ajax({
@@ -637,6 +643,35 @@ $(document).ready(() => {
         event.preventDefault();
       },
     }
+  });
+
+
+  const checkBoxLettering = $('#user-lettering');
+  const letteringField = $('#user-letteringField');
+
+  const isCheckedLettering = checkbox => checkbox.is(':checked');
+  const shownLetteringField = isChecked => {
+    if (isChecked) {
+      $('#user-letteringField-error').css({display: 'block'});
+      letteringField.css({display: 'block'})
+    } else {
+      $('#user-letteringField-error').css({display: 'none'});
+      letteringField.css({display: 'none'})
+    }
+  }
+
+  shownLetteringField(
+    isCheckedLettering(
+      checkBoxLettering,
+    )
+  );
+
+  checkBoxLettering.on('change', () => {
+    shownLetteringField(
+      isCheckedLettering(
+        checkBoxLettering,
+      )
+    );
   });
 
   

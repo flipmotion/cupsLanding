@@ -528,7 +528,7 @@ html
                           p.user-lettering__title.text-uppercase Вышить надпись
                           p.thread-set__description.mb-25 Мы предложим на выбор 500 шрифтов
                           .form-group
-                            input(type="text" placeholder="Введите вашу надпись" name="userLetteringText" data-errorContainer="#errorContainer11").form-control.user-lettering__field
+                            input#user-letteringField(type="text" placeholder="Введите вашу надпись" name="userLetteringText" data-errorContainer="#errorContainer11").form-control.user-lettering__field
                           #errorContainer11.has-danger
                       p.thread-set__description Если вы сомневаетесь в результате — мы пришлем вам примерный макет
                     .col-xs-12.col-sm-12.col-md-5.col-lg-5.mr-auto
@@ -567,7 +567,7 @@ html
         .row
           .col
             .block-8-btn-set.js-isotopeBtns
-              button(type="button" data-filter=".all").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
+              button(type="button" data-filter=".all").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase.is-checked
                 span Весь
               button(type="button" data-filter=".case-1").btn.btn-light.btn-action.btn-action-inline.btn-action-md.btn-action-order.text-uppercase
                 span big russian boss
