@@ -102,6 +102,10 @@
   min-width: 180px;
   margin-right: 20px;
   margin-bottom: 18px;
+
+  @include media-breakpoint-down(xs) {
+    margin: 5px;
+  }
 }
 
 .btn-upload {

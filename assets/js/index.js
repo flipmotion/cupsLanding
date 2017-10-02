@@ -186,7 +186,7 @@ $(document).ready(() => {
 
       email: {
         required: "Это обязательное поле",
-        email: "Введите валидный email адрес",
+        email: "Укажите правильный e-mail",
       },
 
       picture: {
@@ -585,7 +585,7 @@ $(document).ready(() => {
 
         email: {
           required: "Это обязательное поле",
-          email: "Введите валидный email адрес",
+          email: "Укажите правильный e-mail",
         },
 
         picture: {
@@ -644,6 +644,13 @@ $(document).ready(() => {
       },
     }
   });
+
+  $('.msf').on('msf:viewChanged', function() {
+    console.log('change');
+    $('html, body').animate({
+      scrollTop: $('.msf').offset().top - offsetTopHeader
+    }, 350);
+  })
 
 
   const checkBoxLettering = $('#user-lettering');
