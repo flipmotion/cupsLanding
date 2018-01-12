@@ -41,7 +41,7 @@
     width: 36px;
     height: 36px;
     min-width: 36px;
-    margin-right: 45px;
+    margin-right: 15px;
     background: #c1c1c1;
     border-radius: 50%;
     display: flex;
@@ -52,7 +52,7 @@
       width: 30px;
       height: 30px;
       min-width: 30px;
-      margin-right: 15px;
+      margin-right: 10px;
     }
 
     p {
@@ -323,6 +323,10 @@
   }
 }
 
+#wrapperThreadSetImg {
+
+}
+
 .photo-item {
   width: 180px;
   height: 180px;
@@ -333,6 +337,7 @@
   align-items: center;
   justify-content: center;
   background: #fafafa;
+  overflow: hidden;
 
   @include media-breakpoint-down(sm) {
     margin-bottom: 25px;
@@ -344,6 +349,10 @@
 
   &__media {
     margin-bottom: 20px;
+  }
+
+  img {
+    width: 100%;
   }
 
   &__description {
@@ -376,8 +385,10 @@
     opacity: 0;
     width: 0;
     height: 0;
+    position: absolute;
   }
 
+  input[type=checkbox]:checked + label,
   input[type=radio]:checked + label {
     background: #313131;
     color: #fff;
@@ -574,5 +585,49 @@
   margin: 0;
   @include media-breakpoint-down(sm) {
     margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+.color-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-bottom: 15px;
+
+  &-title {
+    color: #a6a6a6;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  > label {
+    flex-basis: calc(100% / 16);
+    margin: 5px;
+    max-width: calc(100% / 16);
+    min-width: calc(100% / 16);
+    width: calc(100% / 16);
+    overflow: hidden;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+  }
+
+  input[type=radio]:checked + label {
+    border-color: #000;
+  }
+
+  img {
+    width: 100%;
   }
 }

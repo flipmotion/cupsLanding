@@ -468,6 +468,10 @@ $(document).ready(() => {
       form.nextNavButton.click();
     });
 
+    $('#step4').on('click', event => {
+      form.nextNavButton.click();
+    });
+
     $('#submitHack').on('click', event => {
       form.submitNavButton.click();
       event.stopPropagation();
@@ -503,6 +507,10 @@ $(document).ready(() => {
         },
 
         thread: {
+          required: true,
+        },
+
+        volumetricEmbroidery: {
           required: true,
         },
 
@@ -560,19 +568,13 @@ $(document).ready(() => {
           required: "Это обязательное поле",
         },
 
-        face: {
+        volumetricEmbroidery: {
           required: "Это обязательное поле",
         },
 
-        // from: {
-        //   required: "Это обязательное поле",
-        //   range: "Некорректный диапозон",
-        // },
-
-        // to: {
-        //   required: "Это обязательное поле",
-        //   range: "Некорректный диапозон",
-        // },
+        face: {
+          required: "Это обязательное поле",
+        },
 
         user: {
           required: "Это обязательное поле",
@@ -646,7 +648,6 @@ $(document).ready(() => {
   });
 
   $('.msf').on('msf:viewChanged', function() {
-    console.log('change');
     $('html, body').animate({
       scrollTop: $('.msf').offset().top - offsetTopHeader
     }, 350);
@@ -680,6 +681,23 @@ $(document).ready(() => {
       )
     );
   });
+
+  const threadSetImageSrc = $('#threadSetImg');
+  const threadImageChange = event => {
+    if (event.target.value === 'Матовые') {
+      threadSetImageSrc.attr('src', 'assets/images/thread-set/set-1.jpg');
+    } else if (event.target.value === 'Глянцевые') {
+      threadSetImageSrc.attr('src', 'assets/images/thread-set/set-2.jpg');
+    } else if (event.target.value === 'Металлизированные') {
+      threadSetImageSrc.attr('src', 'assets/images/thread-set/set-3.jpg');
+    } else if (event.target.value === 'Меняющие цвет') {
+      threadSetImageSrc.attr('src', 'assets/images/thread-set/set-4.jpg');
+    } else if (event.target.value === 'Светящиеся в темноте') {
+      threadSetImageSrc.attr('src', 'assets/images/thread-set/set-5.jpg');
+    }
+  }
+
+  $('input[name=thread]').on('change', threadImageChange)
 
   
   var pluginName = "Morphext",
