@@ -348,12 +348,12 @@ html
                           - var colorID = 'color' + n
                           - var colorIMG = 'image-color-N-' + n
                           - var pathImgbyIDx = 'logo.png' //'color-img-N-' + n
-                          input(type="radio" name="color" value="color" id=colorID data-errorContainer="#errorContainerColor")
+                          input(type="checkbox" name="color" value="color" id=colorID data-errorContainer="#errorContainerColor")
                           label(for=colorID)
                             img(src='../assets/images/' + pathImgbyIDx, alt="")
                       #errorContainerColor.has-danger.small
                   .row
-                    .col-xs-12.my-flex
+                    .col-12.my-flex
                       .step-next
                         button(type="button" id="step2").btn.btn-light.btn-action.btn-action-inline.btn-action-order.text-uppercase
                           span Продолжить
@@ -510,7 +510,7 @@ html
                       p.dress-title.mb-25.text-uppercase.text-center.text-md-left.text-lg-left.text-xl-left Место вышивки
                       .thread-set
                         div
-                          input(type="radio" name="face" data-side="front" data-errorContainer="#errorContainer5" value="Лицевая сторона")#face-1
+                          input(type="radio" name="face" data-side="front" data-errorContainer="#errorContainer5" value="Лицевая сторона" checked)#face-1
                           label(for='face-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Лицевая сторона
                         div

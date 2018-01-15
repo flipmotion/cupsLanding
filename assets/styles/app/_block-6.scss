@@ -623,7 +623,7 @@
     border: 5px solid rgba(0, 0, 0, 0.5);
   }
 
-  input[type=radio]:checked + label {
+  input[type=checkbox]:checked + label {
     border-color: #000;
   }
 
