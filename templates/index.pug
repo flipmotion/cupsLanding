@@ -348,8 +348,10 @@ html
                           - var colorID = 'color' + n
                           - var colorIMG = 'image-color-N-' + n
                           - var pathImgbyIDx = 'logo.png' //'color-img-N-' + n
+                          - var titleTooltip = 'tooltip-' + n;
+
                           input(type="checkbox" name="color" value="color" id=colorID data-errorContainer="#errorContainerColor")
-                          label(for=colorID)
+                          label(for=colorID data-toggle="tooltip"  title=titleTooltip)
                             img(src='../assets/images/' + pathImgbyIDx, alt="")
                       #errorContainerColor.has-danger.small
                   .row
@@ -502,10 +504,8 @@ html
                   .row.step-block-row
                     .col-xs-12.col-sm-12.col-md-3.col-lg-3
                       .photo-item
-                        .photo-item__media
-                          img(src="../assets/images/photo-item-2.png")
-                        .photo-item__description
-                          p Фото сторон <br> изделия
+                        #wrapperThreadSetImg2
+                        img(src="../assets/images/thread-set/set-face-1.jpg" id="threadSetImg2")  
                     .col-xs-12.col-sm-12.col-md-9.col-lg-9
                       p.dress-title.mb-25.text-uppercase.text-center.text-md-left.text-lg-left.text-xl-left Место вышивки
                       .thread-set

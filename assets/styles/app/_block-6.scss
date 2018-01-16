@@ -604,6 +604,10 @@
     color: #a6a6a6;
     font-size: 14px;
     margin-bottom: 15px;
+
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+    }
   }
 
   input {
@@ -621,6 +625,15 @@
     width: calc(100% / 16);
     overflow: hidden;
     border: 5px solid rgba(0, 0, 0, 0.5);
+
+    @include media-breakpoint-down(xs) {
+      flex-basis: calc(100% / 10);
+      max-width: calc(100% / 10);
+      min-width: calc(100% / 10);
+      width: calc(100% / 10);
+      margin: 2.5px;
+      border-width: 2.5px;
+    }
   }
 
   input[type=checkbox]:checked + label {
@@ -629,5 +642,9 @@
 
   img {
     width: 100%;
+  }
+
+  @include media-breakpoint-down(xs) {
+    justify-content: center;
   }
 }

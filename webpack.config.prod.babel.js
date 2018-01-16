@@ -69,7 +69,19 @@ let config = {
       },
       {
         test: /\.pug$/,
-        use:  ['html-loader', 'pug-html-loader?pretty&exports=true']
+        use:  [{
+          loader: 'html-loader',
+          options: {
+            minimize: false,
+          }
+        },
+        {
+          loader: 'pug-html-loader',
+          options: {
+            pretty: true,
+            exports: true,
+          }
+        }]
       },
       {
         test: /\.scss$/,
@@ -97,7 +109,7 @@ let config = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-          warnings: false
+        warnings: false
       }
     }),
     new SpriteLoaderPlugin(),
@@ -132,6 +144,7 @@ let config = {
       Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
       Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
       Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
+      Tooltip: "exports-loader?Tab!bootstrap/js/dist/tooltip",
       Util: "exports-loader?Util!bootstrap/js/dist/util",
     }),
     extractStyles,

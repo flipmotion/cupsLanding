@@ -699,6 +699,21 @@ $(document).ready(() => {
 
   $('input[name=thread]').on('change', threadImageChange)
 
+
+  const threadSetImageSrc2 = $('#threadSetImg2');
+  const threadImageChange2 = event => {
+    if (event.target.value === 'Лицевая сторона') {
+      threadSetImageSrc2.attr('src', 'assets/images/thread-set/set-face-1.jpg');
+    } else if (event.target.value === 'Оборотная сторона') {
+      threadSetImageSrc2.attr('src', 'assets/images/thread-set/set-face-2.jpg');
+    } else if (event.target.value === 'Боковая сторона') {
+      threadSetImageSrc2.attr('src', 'assets/images/thread-set/set-face-3.jpg');
+    }
+  }
+
+  $('input[name=face]').on('change', threadImageChange2)
+
+  $('[data-toggle="tooltip"]').tooltip();
   
   var pluginName = "Morphext",
   defaults = {
