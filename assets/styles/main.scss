@@ -30,3 +30,8 @@
 html, body {
   overflow-x: hidden;
 }
+
+.form-control {
+  outline: none;
+  box-shadow: none !important;
+}

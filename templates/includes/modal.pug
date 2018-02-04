@@ -33,7 +33,7 @@
                         label.modal-form__label
                           span E-mail
                           span.required (Обязательно)
-                        input.form-control(type='email' data-input="email" name="email" required)
+                        input.form-control(type='email' data-input="email" name="email")
 
                     .col-xs-12.col-md-6
                       .form-group
@@ -53,10 +53,11 @@
                         .col-sm-6.col-md-12.col-lg-12.col-xl-6
                           ul
                             li загрузите .png или .jpg
-                            li максимальный размер файла 8мб
+                            li максимальный размер файла 8 Мб
                   .row
                     .col.text-center
-                      p.policy Нажимая кнопку, вы даете согласие на обработку своих персональных данных
+                      p.policy Нажимая кнопку, вы    
+                        a.data-politic(href="#") даете согласие на обработку своих персональных данных
                   .row
                     .col.text-center
                       button(type="submit").btn.btn-primary ОТПРАВИТЬ

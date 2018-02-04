@@ -33,6 +33,11 @@ $(document).ready(() => {
       $buttonGroup.find('.is-checked').removeClass('is-checked');
       $(this).addClass('is-checked');
     });
+
+    $buttonGroup.find('button')[0].click(function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
   });
 });
 
@@ -185,7 +190,6 @@ $(document).ready(() => {
       },
 
       email: {
-        required: "Это обязательное поле",
         email: "Укажите правильный e-mail",
       },
 
@@ -230,7 +234,7 @@ $(document).ready(() => {
 
         setTimeout(() => {
           $('#thx').modal('hide');
-        }, 3000);
+        }, 10000);
       }
 
       $.ajax({
@@ -249,7 +253,7 @@ $(document).ready(() => {
   const msfCssClasses = {
     header: "msf-header",
     step: "msf-step",
-    stepComplete: "active",
+    stepComplete: "complete",
     stepActive: "active",
     content: "msf-content",
     view: "msf-view",
@@ -443,6 +447,8 @@ $(document).ready(() => {
           form.nextNavButton.hide();
           form.submitNavButton.hide();
         });
+
+        console.log(view, index);
       });
 
       form.setActiveView(settings.activeIndex);
@@ -483,11 +489,28 @@ $(document).ready(() => {
 
       form.setActiveView(i-1);
     });
+
+    $('.msf-step').each((idx, item) => {
+      $(item).on('click', () => {
+        if($(item).hasClass('complete')) {
+          form.setActiveView(idx);
+        }
+      })
+    })
   };
 
   const isFrontSide = () => $('[data-side="front"]').is(':checked');
   const isBackSide = () => $('[data-side="back"]').is(':checked');
 
+  const sizeSettings = (() => {
+    const sizeSet = $('.size-set').find('input');
+    const isSizeSetOne = items => items.length === 1;
+
+    if(isSizeSetOne(sizeSet)) {
+      $(sizeSet[0]).prop('checked', true)
+    }
+  })();
+  
   $(".msf").multiStepForm({
     activeIndex: 0,
     hideBackButton: false,
@@ -507,10 +530,6 @@ $(document).ready(() => {
         },
 
         thread: {
-          required: true,
-        },
-
-        volumetricEmbroidery: {
           required: true,
         },
 
@@ -537,7 +556,6 @@ $(document).ready(() => {
         },
 
         email: {
-          required: true,
           email: true,
         },
 
@@ -568,10 +586,6 @@ $(document).ready(() => {
           required: "Это обязательное поле",
         },
 
-        volumetricEmbroidery: {
-          required: "Это обязательное поле",
-        },
-
         face: {
           required: "Это обязательное поле",
         },
@@ -586,7 +600,6 @@ $(document).ready(() => {
         },
 
         email: {
-          required: "Это обязательное поле",
           email: "Укажите правильный e-mail",
         },
 
@@ -630,7 +643,7 @@ $(document).ready(() => {
 
           setTimeout(() => {
             $('#thx').modal('hide');
-          }, 3000);
+          }, 10000);
         }
 
         $.ajax({
@@ -713,7 +726,52 @@ $(document).ready(() => {
 
   $('input[name=face]').on('change', threadImageChange2)
 
+  $('input[name=dress]').on('change', ({ target }) => {
+    const idx = target.getAttribute('id');
+    const description = $('#dressDescription');
+    const text = description.find('span');
+    const block = {'display': 'block'}
+    const none = {'display': 'none'}
+    console.log(text);
+
+    switch(idx) {
+      case 'dress-1':
+        $(text).css(none);
+        $(text[0]).css(block);
+      break;
+      case 'dress-2':
+        $(text).css(none);
+        $(text[1]).css(block);
+      break;
+      case 'dress-3':
+        $(text).css(none);
+        $(text[2]).css(block);
+      break;
+      case 'dress-4':
+        $(text).css(none);
+        $(text[3]).css(block);
+      break;
+      case 'dress-5':
+        $(text).css(none);
+        $(text[4]).css(block);
+      break;
+      case 'dress-6':
+        $(text).css(none);
+        $(text[5]).css(block);
+      break;
+      default:
+        $(text).css(none);
+        $(text[0]).css(block);
+    }
+  })
+
   $('[data-toggle="tooltip"]').tooltip();
+
+  const disableTooltips = (() => {
+    if (window.innerWidth < 460) {
+      $('[data-toggle="tooltip"]').tooltip('dispose');
+    }
+  })();
   
   var pluginName = "Morphext",
   defaults = {

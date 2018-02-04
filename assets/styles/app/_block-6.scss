@@ -81,7 +81,6 @@
   }
 
   &.active {
-
     .steps-item {
       &__position {
         background: #000;
@@ -90,6 +89,20 @@
       &__title {
         p {
           color: #0b0c0d;
+        }
+      }
+    }
+  }
+
+  &.complete {
+    .steps-item {
+      &__position {
+        background: #868e96;
+      }
+
+      &__title {
+        p {
+          color: #868e96;
         }
       }
     }
@@ -507,6 +520,13 @@
       }
     }
   }
+
+  .form-group {
+    @include media-breakpoint-down(sm) {
+      margin-left: -40px;
+      width: calc(100% + 40px);
+    }
+  }
   
   .has-danger label {
     width: 100%;
@@ -647,4 +667,37 @@
   @include media-breakpoint-down(xs) {
     justify-content: center;
   }
+}
+
+#dressDescription span {
+  display: none;
+
+  &:first-child {
+    display: block;
+  }
+}
+
+.volumetricEmbroidery {
+  span {
+    display: block;
+    white-space: nowrap;
+    margin-left: 45px;
+    line-height: 29px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+  }
+}
+
+#errorContainer7 {
+  * {
+    display: none !important;
+  }
+}
+
+#errorContainer72,
+#errorContainer73 {
+  font-size: 12px;
+  margin-top: 5px;
 }

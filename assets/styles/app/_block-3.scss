@@ -25,4 +25,26 @@
       margin: 0;
     }
   }
+
+  .product-item__media {
+    cursor: pointer;
+
+    img:last-child {
+      display: none;
+    }
+
+    img:first-child {
+      display: block;
+    }
+
+    &:hover, &:focus {
+      img:last-child {
+        display: block;
+      }
+
+      img:first-child {
+        display: none;
+      }
+    }
+  }
 }
