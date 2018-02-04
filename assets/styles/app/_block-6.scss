@@ -184,6 +184,10 @@
   }
 
   &-option {
+    display: none;
+    &:first-child {
+      display: block;
+    }
 
     .has-danger {
       font-size: 12px;

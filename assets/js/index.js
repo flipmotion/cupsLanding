@@ -537,16 +537,6 @@ $(document).ready(() => {
           required: true,
         },
 
-        // from: {
-        //   required: true,
-        //   range: element => isFrontSide() ? [0, 17] : isBackSide() ? [0, 5] : [0, 17],
-        // },
-
-        // to: {
-        //   required: true,
-        //   range: element => isFrontSide() ? [0, 7.5] : isBackSide() ? [0, 5] : [0, 17],
-        // },
-
         user: {
           required: true,
         },
@@ -714,45 +704,17 @@ $(document).ready(() => {
     }
   }
 
-  $('input[name=face]').on('change', threadImageChange2)
+  $('input[name=face]').on('change', threadImageChange2);
 
-  $('input[name=dress]').on('change', ({ target }) => {
-    const idx = target.getAttribute('id');
-    const description = $('#dressDescription');
-    const text = description.find('span');
-    const block = {'display': 'block'}
-    const none = {'display': 'none'}
-
-    switch(idx) {
-      case 'dress-1':
-        $(text).css(none);
-        $(text[0]).css(block);
-      break;
-      case 'dress-2':
-        $(text).css(none);
-        $(text[1]).css(block);
-      break;
-      case 'dress-3':
-        $(text).css(none);
-        $(text[2]).css(block);
-      break;
-      case 'dress-4':
-        $(text).css(none);
-        $(text[3]).css(block);
-      break;
-      case 'dress-5':
-        $(text).css(none);
-        $(text[4]).css(block);
-      break;
-      case 'dress-6':
-        $(text).css(none);
-        $(text[5]).css(block);
-      break;
-      default:
-        $(text).css(none);
-        $(text[0]).css(block);
-    }
+  Array.from(document.querySelectorAll('input[name=dress]')).map((input, idx) => {
+    const content = Array.from(document.querySelectorAll('.dress-option'));
+    $(input).on('change', ({target}) => {
+      $('.dress-option').css({'display': 'none'});
+      $(content[idx]).css({'display': 'block'});
+    });
   })
+
+
 
   $('[data-toggle="tooltip"]').tooltip();
 
