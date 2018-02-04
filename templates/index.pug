@@ -415,26 +415,32 @@ html
                         .color-set
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="черный")#color-1
-                            label(for='color-1').black
+                            label(for='color-1')
+                              include ../assets/images/svg/bomber.svg
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="серый")#color-2
-                            label(for='color-2').gray
+                            label(for='color-2')
+                              include ../assets/images/svg/bomber.svg
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="красный")#color-3
-                            label(for='color-3').red
+                            label(for='color-3')
+                              include ../assets/images/svg/bomber.svg
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="синий")#color-4
-                            label(for='color-4').blue
+                            label(for='color-4')
+                              include ../assets/images/svg/bomber.svg
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="розовый")#color-5
-                            label(for='color-5').pink
+                            label(for='color-5')
+                              include ../assets/images/svg/bomber.svg
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="зелёный")#color-6
-                            label(for='color-6').green
+                            label(for='color-6')
+                              include ../assets/images/svg/bomber.svg
                           .color-item
                             input(type="radio" name="color" data-errorContainer="#errorContainer2" value="черный и белый")#color-7
-                            label(for='color-7').grad
-                              span.half-black
+                            label(for='color-7')
+                              include ../assets/images/svg/bomber.svg
                         #errorContainer2.has-danger
                         p.dress-title.mb-25.text-uppercase выберите размер :
                         .size-set
@@ -472,23 +478,23 @@ html
                       p.dress-title.mb-25.text-uppercase.text-center.text-md-left.text-lg-left.text-xl-left Нитки для вышивки:
                       .thread-set
                         div
-                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Матовые" checked)#thread-1
+                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Матовые" src='assets/images/thread-set/set-1.jpg' checked)#thread-1
                           label(for='thread-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Матовые
                         div
-                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Глянцевые")#thread-2
+                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Глянцевые" src='assets/images/thread-set/set-2.jpg')#thread-2
                           label(for='thread-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Глянцевые
                         div
-                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Металлизированные")#thread-3
+                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Металлизированные" src='assets/images/thread-set/set-3.jpg')#thread-3
                           label(for='thread-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Металлизированные
                         div
-                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Меняющие цвет")#thread-4
+                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Меняющие цвет" src='assets/images/thread-set/set-4.jpg')#thread-4
                           label(for='thread-4').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Меняющие цвет
                         div
-                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Светящиеся в темноте")#thread-6
+                          input(type="radio" name="thread" data-errorContainer="#errorContainer4" value="Светящиеся в темноте" src='assets/images/thread-set/set-5.jpg')#thread-6
                           label(for='thread-6').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span светящиеся в темноте
                       #errorContainer4.has-danger.small
@@ -508,15 +514,15 @@ html
                       p.dress-title.mb-25.text-uppercase.text-center.text-md-left.text-lg-left.text-xl-left Место вышивки
                       .thread-set
                         div
-                          input(type="radio" name="face" data-side="front" data-errorContainer="#errorContainer5" value="Лицевая сторона" checked)#face-1
+                          input(type="radio" name="face" data-side="front" data-errorContainer="#errorContainer5" value="Лицевая сторона" src="assets/images/thread-set/set-face-1.jpg" checked)#face-1
                           label(for='face-1').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Лицевая сторона
                         div
-                          input(type="radio" name="face" data-side="back" data-errorContainer="#errorContainer5" value="Оборотная сторона")#face-2
+                          input(type="radio" name="face" data-side="back" data-errorContainer="#errorContainer5" value="Оборотная сторона" src="assets/images/thread-set/set-face-2.jpg")#face-2
                           label(for='face-2').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Оборотная сторона
                         div
-                          input(type="radio" name="face" data-side="aside" data-errorContainer="#errorContainer5" value="Боковая сторона")#face-3
+                          input(type="radio" name="face" data-side="aside" data-errorContainer="#errorContainer5" value="Боковая сторона" src="assets/images/thread-set/set-face-3.jpg")#face-3
                           label(for='face-3').btn.btn-light.btn-action.btn-action-inline.btn-action-sm.btn-action-order.btn-thread.text-uppercase
                             span Боковая сторона
                       #errorContainer5.has-danger.small
