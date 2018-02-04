@@ -510,6 +510,14 @@ $(document).ready(() => {
       $(sizeSet[0]).prop('checked', true)
     }
   })();
+
+  const isRequiredDress = nubmer => {
+    return Array.from(document.querySelectorAll('input[name=dress]')).map((input, idx) => {
+      return $(input).on('change', ({target}) => {
+        return nubmer === idx;
+      });
+    })
+  }
   
   $(".msf").multiStepForm({
     activeIndex: 0,
@@ -521,12 +529,52 @@ $(document).ready(() => {
           required: true,
         },
 
-        size: {
-          required: true,
+        'size-set-1': {
+          required: isRequiredDress(0),
         },
 
-        color: {
-          required: true,
+        'size-set-2': {
+          required: isRequiredDress(1),
+        },
+
+        'size-set-3': {
+          required: isRequiredDress(2),
+        },
+
+        'size-set-4': {
+          required: isRequiredDress(3),
+        },
+
+        'size-set-5': {
+          required: isRequiredDress(4),
+        },
+
+        'size-set-6': {
+          required: isRequiredDress(5),
+        },
+
+        'color-set-1': {
+          required: isRequiredDress(0),
+        },
+
+        'color-set-2': {
+          required: isRequiredDress(1),
+        },
+
+        'color-set-3': {
+          required: isRequiredDress(2),
+        },
+
+        'color-set-4': {
+          required: isRequiredDress(3),
+        },
+
+        'color-set-5': {
+          required: isRequiredDress(4),
+        },
+
+        'color-set-6': {
+          required: isRequiredDress(5),
         },
 
         thread: {
@@ -563,12 +611,52 @@ $(document).ready(() => {
         dress: {
           required: "Это обязательное поле",
         },
-
-        size: {
+        
+        'size-set-1': {
           required: "Это обязательное поле",
         },
 
-        color: {
+        'size-set-2': {
+          required: "Это обязательное поле",
+        },
+
+        'size-set-3': {
+          required: "Это обязательное поле",
+        },
+
+        'size-set-4': {
+          required: "Это обязательное поле",
+        },
+
+        'size-set-5': {
+          required: "Это обязательное поле",
+        },
+
+        'size-set-6': {
+          required: "Это обязательное поле",
+        },
+
+        'color-set-1': {
+          required: "Это обязательное поле",
+        },
+
+        'color-set-2': {
+          required: "Это обязательное поле",
+        },
+
+        'color-set-3': {
+          required: "Это обязательное поле",
+        },
+
+        'color-set-4': {
+          required: "Это обязательное поле",
+        },
+
+        'color-set-5': {
+          required: "Это обязательное поле",
+        },
+
+        'color-set-6': {
           required: "Это обязательное поле",
         },
 
@@ -711,6 +799,7 @@ $(document).ready(() => {
     $(input).on('change', ({target}) => {
       $('.dress-option').css({'display': 'none'});
       $(content[idx]).css({'display': 'block'});
+      $('.dress-option .has-danger *').remove();
     });
   })
 
