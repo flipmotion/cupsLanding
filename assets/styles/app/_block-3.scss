@@ -38,12 +38,12 @@
     }
 
     &:hover, &:focus {
-      img:last-child {
-        display: block;
-      }
-
       img:first-child {
         display: none;
+      }
+
+      img:last-child {
+        display: block;
       }
     }
   }

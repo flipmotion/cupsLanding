@@ -288,7 +288,6 @@
 
 .size-set {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 
@@ -297,6 +296,8 @@
   }
 
   .btn-light {
+    margin-right: 10px;
+
     @include media-breakpoint-down(xs) {
       margin: 0 20px 20px 0;
     }
